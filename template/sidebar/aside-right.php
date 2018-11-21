@@ -1,0 +1,1 @@
+<?php simpleTheme_aside_right(); ?>

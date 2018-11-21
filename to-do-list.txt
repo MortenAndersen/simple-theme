@@ -1,0 +1,16 @@
+Fil: custom-header.php
+Er udkommenteret i functions.php ... hvad bruges den til ... hvis overhovedet?
+Svar: er vist til at indsæette default info
+
+Hide title skal benyttes!
+
+
+get_background_color() benyttes som baggrundfarve til header .... det skal føres mere elegang
+
+comments !!!!
+
+Widget skal flyttes til selvstændig fil
+
+Blikfang / statemenst i top container
+
+Sticky-menu script skal gøres til jQuery ... ikke footer
