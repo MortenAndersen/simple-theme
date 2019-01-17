@@ -53,7 +53,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	ob_start();
 
 	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><?php echo sprintf(_n('%d produkt', '%d produkter', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'simpletheme'); ?>"><?php echo sprintf(_n('%d produkt', '%d produkter', $woocommerce->cart->cart_contents_count, 'simpletheme'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
 	<?php
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;
@@ -67,13 +67,17 @@ add_filter('woocommerce_product_additional_information_heading', '__return_empty
 
 
 /**
- * Change number of products that are displayed per page (shop page)
+ * Antal produkter på oversigt
  */
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
-function new_loop_shop_per_page( $cols ) {
-  // $cols contains the current number of products per page based on the value stored on Options -> Reading
-  // Return the number of products you wanna show per page.
-  $cols = 8;
-  return $cols;
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 4;
+	}
 }
+
+function simpletheme_woocommerce_catalog_orderby( $orderby ) {
+    unset($orderby["rating"]);      //Remove rating option.
+    return $orderby;
+}
+add_filter( "woocommerce_catalog_orderby", "simpletheme_woocommerce_catalog_orderby", 20 );

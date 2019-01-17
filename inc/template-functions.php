@@ -36,7 +36,7 @@ function simpleTheme_the_post_thumbnail() {
         if(!empty($caption)) {
             echo '<div class="img-caption">' . $caption . '</div>';
         }
-    echo '</div>';
+        echo '</div>';
     }
 }
 
@@ -155,7 +155,7 @@ endif;
 function simpleTheme_go_back() {
     if (is_single() ):
         echo '<div class="go-back-con">';
-        echo '<button onclick="goBack()" class="go-back">' . esc_html__( 'Go back', 'impletheme' ) . '</button>';
+        echo '<button onclick="goBack()" class="go-back">' . esc_html__( 'Go back', 'simpletheme' ) . '</button>';
         echo '<script>function goBack() {window.history.back();}</script>';
         echo '</div>';
 endif;

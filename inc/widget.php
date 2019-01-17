@@ -123,6 +123,17 @@ function simpletheme_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => __( 'Aside left (woo cat)', 'simpletheme' ),
+			'id'            => 'sidebar-aside-left-woo-cat',
+			'description'   => __( 'Add widgets here to appear in your left aside on Woo Cat.', 'simpletheme' ),
+			'before_widget' => '<div id="%1$s" class="widget aside-widget aside-left-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title widget-title-aside">',
+			'after_title'   => '</h5>',
+		)
+	);
 
 }
 

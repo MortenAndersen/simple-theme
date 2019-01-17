@@ -64,6 +64,14 @@ function simpletheme_setup() {
 add_action( 'after_setup_theme', 'simpletheme_setup' );
 
 endif;
+
+// Sprogfiler loades
+function simpletheme_localize_theme() {
+  load_theme_textdomain( 'simpletheme', get_template_directory() . '/languages' );
+}
+
+add_action( 'after_setup_theme', 'simpletheme_localize_theme' );
+
 // ---------------------------------------------------
 
 // Theme options
