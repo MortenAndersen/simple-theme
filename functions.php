@@ -94,6 +94,9 @@ require get_parent_theme_file_path( '/inc/woo-functions.php' );
  */
 require get_parent_theme_file_path( '/inc/template-functions.php' );
 
+// Guttenberg
+//require get_parent_theme_file_path( '/inc/guttenberg-functions.php' );
+
 // require get_parent_theme_file_path( '/inc/custom-header.php' );
 
 //require get_parent_theme_file_path( '/inc/page-metabox.php' );
