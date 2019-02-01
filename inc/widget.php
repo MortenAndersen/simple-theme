@@ -125,6 +125,17 @@ function simpletheme_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name'          => __( 'Top container banner', 'simpletheme' ),
+			'id'            => 'sidebar-top-banner',
+			'description'   => __( 'Add gallery here to appear in your banner.', 'simpletheme' ),
+			'before_widget' => '<div id="%1$s" class="widget top-container-widget banner">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Aside left (woo cat)', 'simpletheme' ),
 			'id'            => 'sidebar-aside-left-woo-cat',
 			'description'   => __( 'Add widgets here to appear in your left aside on Woo Cat.', 'simpletheme' ),
