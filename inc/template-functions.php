@@ -172,7 +172,15 @@ function simpleTheme_copyright() {
         echo '</div>';
         echo '</div>';
         echo '</div>';
-endif;
+    endif;
+}
+
+// HTML body footer (Google analytics etc.)
+
+function simpleTheme_html_body_footer() {
+    if( get_option('simpletheme-html-bottom') ):
+        echo get_option('simpletheme-html-bottom');
+    endif;
 }
 
 // Cart

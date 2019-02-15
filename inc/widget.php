@@ -103,6 +103,17 @@ function simpletheme_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name'          => __( 'Frontpage grid (only frontpage)', 'simpletheme' ),
+			'id'            => 'sidebar-frontpage-grid',
+			'description'   => __( 'Add widgets here to appear in a grid on the frontpage.', 'simpletheme' ),
+			'before_widget' => '<div id="%1$s" class="widget frontpage-grid-widget flex-item">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title widget-title-frontpage-grid">',
+			'after_title'   => '</h5>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Mobilemenu widget', 'simpletheme' ),
 			'id'            => 'sidebar-mobilemenu-widget',
 			'description'   => __( 'Add widgets here to appear ONLY in your mobile-menu-container. (not the menu!)', 'simpletheme' ),
@@ -130,8 +141,8 @@ function simpletheme_widgets_init() {
 			'description'   => __( 'Add gallery here to appear in your banner.', 'simpletheme' ),
 			'before_widget' => '<div id="%1$s" class="widget top-container-widget banner">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
+			'before_title'  => '<div class="widget-title screen-reader-text">',
+			'after_title'   => '</div>',
 		)
 	);
 	register_sidebar(

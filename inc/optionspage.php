@@ -10,21 +10,31 @@ function simple_settings() {
     // Copyright
     add_settings_field("simpletheme-copyright", "Copyright", "simple_copyright_display", "simple", "section");
     register_setting("section", "simpletheme-copyright");
+
+    // HTML bottom
+    add_settings_field("simpletheme-html-bottom", "HTML body bottom", "simple_html_bottom_display", "simple", "section");
+    register_setting("section", "simpletheme-html-bottom");
 }
 
 // Menu
 function simple_radio_display() {
-   ?><p>Left (default)
-        <input type="radio" name="simpletheme-radio-menu" value="1" <?php checked(1, get_option('simpletheme-radio-menu'), true); ?>>
-        Right
-        <input type="radio" name="simpletheme-radio-menu" value="2" <?php checked(2, get_option('simpletheme-radio-menu'), true); ?>></p>
-   <?php
+    echo '<p>Left (default) ';
+    echo '<input type="radio" name="simpletheme-radio-menu" value="1"' . checked(1, get_option('simpletheme-radio-menu'), true) . '>';
+    echo 'Right ';
+    echo '<input type="radio" name="simpletheme-radio-menu" value="2"' . checked(2, get_option('simpletheme-radio-menu'), true) . '>';
+    echo '</p>';
+
 }
 
 // Copyright
 function simple_copyright_display() {
-  echo 'Copyright';
-  echo '<input type="text" name="simpletheme-copyright" value="' . esc_attr( get_option('simpletheme-copyright'), true) . '">';
+    echo '<input type="text" name="simpletheme-copyright" value="' . esc_attr( get_option('simpletheme-copyright'), true) . '">';
+}
+
+// HTML bottom
+function simple_html_bottom_display() {
+    echo '<textarea name="simpletheme-html-bottom" style="height: 100px; width: 300px;">' . esc_attr( get_option('simpletheme-html-bottom'), true) . '</textarea>';
+    echo '<p><em>Google Analytics etc.</em></p>';
 }
 
 // Admin Page
