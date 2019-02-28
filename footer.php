@@ -4,21 +4,6 @@
 <?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php wp_footer(); ?>
 
-<script>
-window.onscroll = function() {stickyNavFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function stickyNavFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky-navbar")
-  } else {
-    navbar.classList.remove("sticky-navbar");
-  }
-}
-</script>
-
 <?php if ( is_active_sidebar( 'sidebar-top-animate-bounceinup' ) ) { ?>
 <script>
 	(function ($) {

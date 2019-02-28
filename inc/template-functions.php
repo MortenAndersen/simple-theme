@@ -53,7 +53,7 @@ function simpleTheme_header_style() {
             echo 'color:#' . get_header_textcolor() . ';';
             echo '}';
         }
-        if  ( !has_header_image() && !empty(get_header_textcolor()) && !empty(get_background_color()) ) {
+        if  ( !has_header_image() || !empty(get_header_textcolor()) || !empty(get_background_color()) ) {
             echo '.background-header, .site-header-text {';
             echo 'color:#' . get_header_textcolor() . ';';
             echo 'background:#' . get_background_color() . ';';
