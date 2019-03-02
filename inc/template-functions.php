@@ -15,7 +15,7 @@ function simpleTheme_site_header() {
         echo '<div class="site-header-text not-phone">';
         // Title
         if ( get_bloginfo( 'name' )  !== '' ) {
-            echo '<div class="site-title">' . get_bloginfo( 'name' ) . '</div>';
+            echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';
         }
         // Description
         $description = get_bloginfo( 'description', 'display' );
