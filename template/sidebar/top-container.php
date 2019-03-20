@@ -1,12 +1,28 @@
-<?php if ( is_active_sidebar( 'sidebar-top-container' ) || is_active_sidebar( 'sidebar-top-animate-bounceinup' ) || is_active_sidebar( 'sidebar-top-banner' ) || is_active_sidebar( 'sidebar-frontpage-grid' )  ) { ?>
-	<div class="width-top">
-		<?php dynamic_sidebar( 'sidebar-top-banner' ); ?>
-	<?php if ( is_active_sidebar( 'sidebar-top-container' ) || is_active_sidebar( 'sidebar-top-animate-bounceinup' ) || is_active_sidebar( 'sidebar-frontpage-grid' ) ) { ?>
-		<div class="l-wrap">
-		<?php dynamic_sidebar( 'sidebar-top-container' ); ?>
-		<?php get_template_part( 'template/sidebar/animate-bounceinup' ); ?>
-		<?php get_template_part( 'template/sidebar/frontpage-grid' ); ?>
-		</div>
-	<?php }?>
-	</div>
-<?php }?>
+<?php if ( is_active_sidebar( 'sidebar-top-container' ) || is_active_sidebar( 'sidebar-top-animate-bounceinup' ) || is_active_sidebar( 'sidebar-top-banner' ) || is_active_sidebar( 'sidebar-frontpage-grid' )  ) {
+
+	echo '<div class="width-top">';
+
+ 		if (is_active_sidebar( 'top-banner-aside' )) {
+ 			echo '<div class="banner-img-aside">';
+				echo '<div class="top-banner-left">';
+					 dynamic_sidebar( 'sidebar-top-banner' );
+				echo '</div>';
+				echo '<div class="top-banner-aside">';
+					 dynamic_sidebar( 'top-banner-aside' );
+				echo '</div>';
+			echo '</div>';
+		}
+		else {
+			dynamic_sidebar( 'sidebar-top-banner' );
+		}
+
+		if ( is_active_sidebar( 'sidebar-top-container' ) || is_active_sidebar( 'sidebar-top-animate-bounceinup' ) || is_active_sidebar( 'sidebar-frontpage-grid' ) ) {
+				echo '<div class="l-wrap">';
+					dynamic_sidebar( 'sidebar-top-container' );
+					get_template_part( 'template/sidebar/animate-bounceinup' );
+					get_template_part( 'template/sidebar/frontpage-grid' );
+				echo '</div>';
+			}
+
+	echo '</div>';
+}
