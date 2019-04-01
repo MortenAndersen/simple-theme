@@ -3,6 +3,7 @@
 <?php the_title( '<h1>', '</h1>'); ?>
 <?php simpleTheme_the_post_thumbnail(); ?>
 <?php the_content(); ?>
+<?php simpleTheme_acf_gallery(); ?>
 <?php simpleTheme_go_back(); ?>
 <?php if ( comments_open() || get_comments_number() ) :
 				comments_template();

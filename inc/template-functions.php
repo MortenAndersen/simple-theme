@@ -12,7 +12,7 @@ function simpleTheme_site_header() {
     }
 
     if ( 'blank' !== get_header_textcolor() ) {
-        echo '<div class="site-header-text not-phone">';
+        echo '<div class="site-header-text">';
         // Title
         if ( get_bloginfo( 'name' )  !== '' ) {
             echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';
@@ -140,15 +140,86 @@ function simpleTheme_aside_class() {
 }
 
 // ACF Background image
-if( function_exists('acf_add_local_field_group') ):
-    function simpleTheme_acf_background_image(){
+
+function simpleTheme_acf_background_image(){
+    if( function_exists('acf_add_local_field_group') ):
         if( get_field('background_image') ):
             echo '<style>';
             echo 'body.custom-background {background-image: url("' . get_field('background_image') . '");}';
             echo '</style>';
         endif;
-    }
-endif;
+    endif;
+ }
+
+
+// ACF Gallery
+
+function simpleTheme_acf_gallery() {
+    if( function_exists('acf_add_local_field_group') ):
+        if( have_rows('galleri_box') ):
+            while( have_rows('galleri_box') ): the_row();
+                echo '<div class="gallery-box">';
+                    // Var
+                    $title = get_sub_field( 'overskrift' );
+                    $text1 = get_sub_field( 'beskrivelse' );
+                    $text2 = get_sub_field( 'tekst_2' );
+                    $gallery = get_sub_field( 'galleri' );
+                    $size = get_sub_field( 'thumbnail_type' );
+
+                    if ( $title ) {
+                        echo '<h4>' . $title . '</h4>';
+                    }
+
+                    echo $text1;
+
+                    if( $gallery ):
+
+                            echo '<div class="images-box flex-con ' . $size . '">';
+
+
+                        foreach( $gallery as $image ):
+
+
+
+                            echo '<figure class="flex-item">';
+
+
+
+
+                            //echo wp_get_attachment_image( $image['ID'], $size );
+                            if ( (strpos($image['title'], '.jpg') === false) && (strpos($image['title'], '.png') === false) ) {
+                            echo '<a href="' . $image['url'] . '"' . 'data-title="' . $image['title'] . '">';
+                            } else {
+                                echo '<a href="' . $image['url'] . '">';
+                            }
+                            echo '<img src="' . $image['sizes'][$size] . '" alt="' . $image['alt'] . '" title="' . $image['title'] . '" />';
+                            echo '</a>';
+
+
+
+                            if ( (strpos($image['title'], '.jpg') === false) && (strpos($image['title'], '.png') === false) ) {
+                                echo '<div class="img-title">' . $image['title'] . '</div>';
+                            }
+
+                            if ( $image['caption'] ) {
+                                echo '<figcaption>' . $image['caption'] . '</figcaption>';
+                            }
+
+                            echo '</figure>';
+
+                        endforeach;
+                        echo '</div>';
+                    endif;
+
+                    echo $text2;
+
+                echo '</div>';
+            endwhile;
+        endif;
+
+    endif;
+}
+
 
 // BackButton
 

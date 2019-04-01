@@ -21,6 +21,8 @@ function simpletheme_add_google_fonts() {
 	}
 add_action( 'wp_enqueue_scripts', 'simpletheme_add_google_fonts' );
 
+
+
 // ---------------------------------------------------
 if (!function_exists( 'simpletheme_setup' )):
 
@@ -85,6 +87,7 @@ require get_parent_theme_file_path( '/inc/optionspage.php' );
 
 // ACF
 require get_parent_theme_file_path( '/assets/acf/acf-fields.php' );
+require get_parent_theme_file_path( '/assets/acf/acf-fields-gallery.php' );
 
 // WooCommerce
 require get_parent_theme_file_path( '/inc/woo-functions.php' );
