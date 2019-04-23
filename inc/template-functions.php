@@ -174,14 +174,14 @@ function simpleTheme_acf_gallery() {
 
                     if( $gallery ):
 
-                            echo '<div class="images-box flex-con ' . $size . '">';
+                            echo '<div class="images-box ' . $size . '">';
 
 
                         foreach( $gallery as $image ):
 
 
 
-                            echo '<figure class="flex-item">';
+                            echo '<figure class="gal-item">';
 
 
 
