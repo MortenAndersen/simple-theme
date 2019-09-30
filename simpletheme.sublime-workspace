@@ -616,15 +616,19 @@
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/css",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/functions",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/header",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/navigation",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/page",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar"
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/header.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/style.css",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/template-functions.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-fields-gallery.php",
@@ -641,7 +645,6 @@
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-fields.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/frontpage-grid.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/theme.js",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/header.php",
 		"/Users/morten/Downloads/mysql37_unoeuro_com.sql",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/post/archive-loop.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/guttenberg-functions.php",
