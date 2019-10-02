@@ -1,0 +1,164 @@
+.m-info--bar {
+    text-align: right;
+    padding: 1em 2em;
+    overflow: hidden;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.infobar-widget {
+
+    margin-left: 1em;
+
+
+
+    p {
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: inline;
+    }
+
+    .mobile-info & {
+        float: none;
+        margin-left: 0;
+    }
+}
+
+.widget {
+    overflow: hidden;
+}
+
+.widget-left {
+
+    >div,
+    >ul,
+    >form {
+        float: left;
+    }
+}
+
+.widget--small--txt {
+    font-size: .9em;
+}
+
+.footer-widget {
+    .menu {
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .4);
+
+            &.current_page_item {
+                a {
+                    background: rgba(0, 0, 0, .02);
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            display: block;
+            padding: .25em 0;
+
+            &:hover {
+                background: rgba(0, 0, 0, .02);
+            }
+        }
+    }
+}
+
+figure {
+    display: block;
+    max-width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.copyright-con {
+    font-size: .8em;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .copyright-con {
+        text-align: right;
+    }
+}
+
+.show-hide-tricker {
+    border-bottom: 1px solid #f2f2f2;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.sh-plus::before {
+    content: ' + ';
+    color: green;
+    font-weight: normal;
+    width: 20px;
+    float: left;
+}
+
+.sh-minus::before {
+    content: ' - ';
+    color: red;
+    font-weight: normal;
+    width: 20px;
+    float: left;
+}
+
+.frontpage-grid {
+    .textwidget {
+        *:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .gallery figure img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .frontpage-grid {
+
+        .gallery,
+        .frontpage-grid-widget>figure {
+            margin-top: 1em;
+        }
+    }
+
+}
+
+.frontpage-grid {
+    clear: both;
+}

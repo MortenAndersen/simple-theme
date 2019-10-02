@@ -1,0 +1,29 @@
+.l-wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.l-header--content,
+.l-main--content,
+.l-footer--content,
+.l-width--bottom,
+.l-wrap-copyright {
+    overflow: hidden;
+    padding: 1em;
+}
+
+@media (min-width: 769px) {
+    .l-header--content,
+    .l-main--content,
+    .l-footer--content,
+    .l-width--bottom,
+    .l-wrap-copyright {
+        padding: 2em;
+    }
+}
+
+@media (min-width: 1025px) {
+    .l-menu--content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}

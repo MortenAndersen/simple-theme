@@ -1,0 +1,32 @@
+/*!
+Theme Name: SimpleTheme
+Theme URI: https://www.hjemmesider.dk
+Author: Morten Andersen - www.hjemmesider.dk
+Author URI: https://www.hjemmesider.dk/morten-andersen
+Description: Base / Starter theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: simpletheme
+Domain Path: /languages
+*/
+
+@import 'normalize';
+@import 'layout';
+@import 'module';
+@import 'animate';
+@import 'animate-element';
+@import 'table';
+@import 'font';
+@import 'grid';
+@import 'wp';
+@import 'form';
+@import 'helper';
+@import 'simple';
+@import 'slider';
+@import 'gallery';
+@import 'banner';
+@import 'lightbox';
+@import 'menu';
+@import 'menu-add';
+@import 'woo';

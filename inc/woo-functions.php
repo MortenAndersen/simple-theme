@@ -22,13 +22,13 @@ add_action( 'after_setup_theme', 'simpletheme_add_woocommerce_support' );
 function woo_related_products_limit() {
   global $product;
 
-	$args['posts_per_page'] = 6;
+	$args['posts_per_page'] = 5;
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'simpletheme_related_products_args' );
   function simpletheme_related_products_args( $args ) {
-	$args['posts_per_page'] = 6; // 4 related products
-	$args['columns'] = 6; // arranged in 2 columns
+	$args['posts_per_page'] = 5; // 4 related products
+	$args['columns'] = 5; // arranged in 2 columns
 	return $args;
 }
 

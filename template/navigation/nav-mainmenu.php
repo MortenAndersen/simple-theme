@@ -20,7 +20,8 @@
 ?>
 <div id="navbar" class="menu-con background-2 <?php echo $menu_class ?>">
 <div class="l-wrap l-menu--content">
-<nav class="all-menu js-nav-toggle">
+<nav aria-labelledby="hovedmenu-label" class="all-menu js-nav-toggle">
+	<span class="screen-reader-text" id="hovedmenu-label">Hovedmenu</span>
 <?php wp_nav_menu( $main_nav ); ?>
 <?php if ( is_active_sidebar( 'sidebar-infobar' ) || is_active_sidebar( 'sidebar-mobilemenu-widget' )  ) { ?>
 <div class="mobile-info ipad-and-below">

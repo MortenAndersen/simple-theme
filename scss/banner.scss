@@ -1,0 +1,42 @@
+.banner {
+    overflow: hidden;
+    height: 33vh;
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        display: none;
+    }
+}
+
+.banner-img-aside {
+    background: #7b756d;
+    color: #fff;
+    overflow: hidden;
+}
+
+.top-banner-aside {
+    .widget {
+        padding: 1em;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .banner {}
+
+    .top-banner-left {
+        width: 70%;
+        float: left;
+    }
+
+    .top-banner-aside {
+        height: 33vh;
+
+        .widget {
+            padding: 1em 2em;
+        }
+    }
+}

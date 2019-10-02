@@ -1,0 +1,14 @@
+.animate {
+	padding: 2em 0;
+	text-align: center;
+	font-size: 200%;
+	color: #fff;
+	text-shadow: 1px 1px #ddd;
+	p, h5 {
+		margin: 0;
+	}
+}
+.animate-bounceInUp {
+	 animation-duration: 2s;
+	animation-name: bounceInUp;
+}

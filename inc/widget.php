@@ -7,9 +7,9 @@ function simpletheme_widgets_init() {
 			'name'          => __( 'Infobar', 'simpletheme' ),
 			'id'            => 'sidebar-infobar',
 			'description'   => __( 'Add widgets here to appear in your InfoBar and in the mobile-menu-container.', 'simpletheme' ),
-			'before_widget' => '<div id="%1$s" class="widget widget--small--txt infobar-widget widget-left">',
+			'before_widget' => '<div id="%1$s" class="widget widget--small--txt infobar-widget">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title title-left">',
+			'before_title'  => '<h5 class="widget-title">',
 			'after_title'   => '</h5>',
 		)
 	);

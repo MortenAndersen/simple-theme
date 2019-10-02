@@ -54,7 +54,7 @@ function simpleTheme_header_style() {
             echo '}';
         }
         if  ( !has_header_image() || !empty(get_header_textcolor()) || !empty(get_background_color()) ) {
-            echo '.background-header, .site-header-text {';
+            echo '.background-header, .site-header-text, .page-footer {';
             echo 'color:#' . get_header_textcolor() . ';';
             echo 'background:#' . get_background_color() . ';';
             echo '}';

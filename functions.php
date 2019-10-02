@@ -59,6 +59,7 @@ function simpletheme_setup() {
 	// Menu
 	register_nav_menus(array(
 		'main-menu' => __( 'Main Menu', 'simpletheme' ),
+		'top-menu' => __( 'Top Menu', 'simpletheme' ),
 	));
 
 }

@@ -1,0 +1,272 @@
+.background {
+    width: 100%;
+}
+
+.background-main {
+    background: #fff;
+}
+
+.background-2 {
+    background: #243887;
+    background-image: linear-gradient(#243887, #233065)
+}
+
+.background-3 {
+    background: bisque;
+}
+
+.background-4 {
+    background: #7b756d;
+    color: #fff;
+    background-image: linear-gradient(#7b756d, #6f5e48)
+}
+
+body {
+    background: #fff;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@media (max-width: 700px) {
+    .widget {
+        margin-bottom: 3em;
+        &.frontpage-grid-widget {
+            margin-bottom: 1em;
+        }
+    }
+
+    .widget:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.mobile-info {
+    margin: 2em 0;
+    padding: .25em 1em 1.2em 1em;
+    border: 1px solid rgba(255,255,255,.07);
+    background-image: linear-gradient(rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
+    color: #fff;
+    border-radius: 3px;
+    p {
+        margin: 0;
+    }
+
+    .widget {
+        padding: 1em 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+
+        &:last-of-type {
+            border: none;
+            padding-bottom: 0;
+        }
+    }
+    #search-2 {
+        .widget-title {
+            display: none;
+        }
+    }
+}
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    min-height: 4em;
+}
+
+.important-con {
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+    float: left;
+    margin-top: 1em;
+    p {
+        margin: 0;
+    }
+    ul, ol {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    .important-con {
+        right: 2em;
+        top: auto;
+        bottom: 2em;
+        position: absolute;
+        width: auto;
+        border: none;
+    }
+}
+
+aside {
+    font-size: .9em;
+}
+
+footer {
+    padding: 2em 0;
+}
+
+.width-top {
+    overflow: hidden;
+    .animate {
+    }
+    .menu {
+    margin: 0;
+    padding: 2em;
+    display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      justify-content: space-between;
+ }
+ .menu li {
+    margin: .5em 0;
+    padding: 0;
+    list-style-type: none;
+    flex: 1 100%;
+    max-width: 100%;
+ }
+
+ .menu a {
+    color: inherit;
+    display: block;
+    padding: 1em 0;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.5);
+    box-shadow: 0 0 5px #fff;
+    transition: .5s all;
+    border-radius: 3px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+ }
+  .menu a:hover {
+    background: rgba(255,255,255,.2);
+    box-shadow: none;
+  }
+  @media (min-width: 800px){
+    .menu {
+        margin: 0 -.5em;
+    }
+         .menu li {
+            flex: 1 auto;
+            margin: 0;
+ }
+ .menu a {
+        margin: 0 .5em;
+ }
+}
+}
+
+.width-bottom {
+    box-shadow: 1px 1px 1px #777;
+}
+
+.bg-img {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+@media (min-width: 700px) {
+    .simple-grid-con {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .simple-grid-item {
+        flex: 1;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .simple-grid-item:first-of-type {
+        margin-left: 0;
+    }
+
+    .simple-grid-item:last-of-type {
+        margin-right: 0;
+    }
+
+    .simple-grid-item-main {
+        flex: 1 60%;
+        max-width: 60%;
+    }
+
+    .simple-grid-item-main-small {
+        flex: 1 50%;
+        max-width: 50%;
+    }
+
+    .simple-grid-item-aside {
+        flex: 1 30%;
+        max-width: 30%;
+    }
+
+    .simple-grid-item-aside-small {
+        flex: 1 20%;
+        max-width: 20%;
+    }
+
+    .space-between {
+        justify-content: space-between;
+    }
+
+    .order-1 {
+        order: 1
+    }
+
+    .order-2 {
+        order: 2;
+    }
+
+    .order-3 {
+        order: 3;
+    }
+}
+
+
+
+.not-phone {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .not-phone {
+        display: block;
+    }
+}
+
+
+
+.beyond-ipad {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .ipad-and-below {
+        display: none;
+    }
+
+    .beyond-ipad {
+        display: block;
+    }
+}

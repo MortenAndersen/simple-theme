@@ -3,7 +3,7 @@
 		*/
 		?>
 <?php get_header(); ?>
-<div class="background background-main">
+<div id="content" class="background background-main">
   <div class="l-wrap l-main--content simple-grid-con space-between">
     <div class="main simple-grid-item-main">
       <?php get_template_part( 'template/page/page', 'loop' ); ?>

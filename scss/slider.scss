@@ -1,0 +1,117 @@
+ul.slider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.slider li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.slider img {
+    float:left;
+    width: 100%;
+}
+.bx-wrapper {
+    position: relative;
+}
+.bx-controls-direction {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    z-index: 99;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+.bx-next {
+    position: absolute;
+    right: 0;
+}
+.bx-prev {
+    position: absolute;
+    left: 0;
+}
+.bx-controls-direction a,
+.bx-controls-auto a {
+    text-decoration: none;
+    color: rgba(255,255,255,.7);
+    font-size: 1em;
+    height: 2em;
+    width: 1em;
+    line-height: 2em;
+    text-align: center;
+    transition: .5s all;
+    background-image: url(assets/images/slider/left.svg);
+    left: .5em;
+    background-repeat:  no-repeat;
+}
+.bx-controls-direction a.bx-next {
+    background-image: url(assets/images/slider/right.svg);
+    left: auto;
+    right: .5em;
+}
+.bx-controls-auto a.bx-start {
+    background-image: url(assets/images/slider/play.svg);
+}
+.bx-controls-auto a.bx-stop {
+    background-image: url(assets/images/slider/stop.svg);
+}
+
+.bx-controls-auto {
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    bottom: 0;
+    margin-left: -70px;
+    width: 140px;
+    overflow: hidden;
+    font-size: 2em;
+}
+.bx-controls-auto-item {
+    width: 50%;
+    float: left;
+}
+.bx-start,
+.bx-stop {
+    display: block;
+
+    text-decoration: none;
+    opacity: 1;
+}
+.bx-default-pager {
+    overflow: hidden;
+    padding: 1em 0;
+}
+.bx-pager-item {
+    float: left;
+    margin: 0 .25em;
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        line-height: 3em;
+        height: 3em;
+        width: 3em;
+        text-align: center;
+        border: 1px solid #f2f2f2;
+        border-radius: 50%;
+        transition: .5s all;
+        &.active {
+            background: #f2f2f2;
+        }
+        &:hover {
+            box-shadow: 1px 1px 1px #999;
+        }
+    }
+}
+.bx-start.active,
+.bx-stop.active {
+
+}
+.bx-start {
+    margin-right: 5px;
+}
+.bx-stop {
+    margin-left: 5px;
+}
