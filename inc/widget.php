@@ -40,7 +40,7 @@ function simpletheme_widgets_init() {
 			'name'          => __( 'Footer', 'simpletheme' ),
 			'id'            => 'sidebar-footer',
 			'description'   => __( 'Add widgets here to appear in your footer.', 'simpletheme' ),
-			'before_widget' => '<div id="%1$s" class="widget widget--small--txt footer-widget simple-grid-item">',
+			'before_widget' => '<div id="%1$s" class="widget footer-widget">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5 class="widget-title title-high">',
 			'after_title'   => '</h5>',
@@ -117,9 +117,20 @@ function simpletheme_widgets_init() {
 			'name'          => __( 'Mobilemenu widget', 'simpletheme' ),
 			'id'            => 'sidebar-mobilemenu-widget',
 			'description'   => __( 'Add widgets here to appear ONLY in your mobile-menu-container. (not the menu!)', 'simpletheme' ),
-			'before_widget' => '<div id="%1$s" class="widget widget--small--txt infobar-widget widget-left">',
+			'before_widget' => '<div id="%1$s" class="widget mobilemenu-widget">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title title-left">',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
+	register_sidebar(
+	array(
+			'name'          => __( 'Mobilemenu shop widget', 'simpletheme' ),
+			'id'            => 'sidebar-mobilemenu-shop-widget',
+			'description'   => __( 'Add widgets here to appear ONLY in your mobile-menu-shop-container.', 'simpletheme' ),
+			'before_widget' => '<div id="%1$s" class="widget mobilemenu-widge">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
 			'after_title'   => '</h5>',
 		)
 	);

@@ -8,7 +8,7 @@ if ( has_nav_menu( 'top-menu' ) ) :
 
 
 	echo '<nav aria-labelledby="topmenu-label" class="top-menu infobar-widget">';
-	echo '<span class="screen-reader-text" id="topmenu-label">Topmenu</span>';
+	echo '<span class="screen-reader-text" id="topmenu-label">Top menu</span>';
 		wp_nav_menu( $main_nav );
 	echo '</nav>';
 

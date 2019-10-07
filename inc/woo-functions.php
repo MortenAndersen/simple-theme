@@ -42,6 +42,12 @@ function jkx_dequeue_styles( $enqueue_styles ) {
 	return $enqueue_styles;
 }
 
+// Remove count in sub categories
+add_filter( 'woocommerce_subcategory_count_html', 'simple_hide_category_count' );
+function simple_hide_category_count() {
+// No count
+}
+
 /**
  * Show cart contents / total Ajax
  */

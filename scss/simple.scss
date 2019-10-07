@@ -38,7 +38,7 @@ html {
 
 @media (max-width: 700px) {
     .widget {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
         &.frontpage-grid-widget {
             margin-bottom: 1em;
         }
@@ -85,11 +85,8 @@ html {
 }
 
 .important-con {
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
     width: 100%;
     float: left;
-    margin-top: 1em;
     p {
         margin: 0;
     }
@@ -121,6 +118,7 @@ aside {
 
 footer {
     padding: 2em 0;
+    justify-content: space-around;
 }
 
 .width-top {
@@ -207,8 +205,8 @@ footer {
     }
 
     .simple-grid-item-main {
-        flex: 1 60%;
-        max-width: 60%;
+        flex: 1 70%;
+        max-width: 70%;
     }
 
     .simple-grid-item-main-small {
@@ -217,8 +215,8 @@ footer {
     }
 
     .simple-grid-item-aside {
-        flex: 1 30%;
-        max-width: 30%;
+        flex: 1 25%;
+        max-width: 25%;
     }
 
     .simple-grid-item-aside-small {

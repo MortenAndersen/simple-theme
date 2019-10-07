@@ -53,36 +53,6 @@
     font-size: .9em;
 }
 
-.footer-widget {
-    .menu {
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            border-bottom: 1px solid rgba(255, 255, 255, .4);
-
-            &.current_page_item {
-                a {
-                    background: rgba(0, 0, 0, .02);
-                }
-            }
-        }
-
-        a {
-            text-decoration: none;
-            display: block;
-            padding: .25em 0;
-
-            &:hover {
-                background: rgba(0, 0, 0, .02);
-            }
-        }
-    }
-}
-
 figure {
     display: block;
     max-width: 100%;

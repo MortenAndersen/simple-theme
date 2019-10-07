@@ -562,11 +562,15 @@ ul.woocommerce-error {
     float: left;
     text-decoration: none;
     background: none;
-    padding: .25em;
-    border-radius: 3px;
+    background-image: url(assets/images/basket-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5em;
+    opacity: .8;
+    transition: .5s all;
 
     &:hover {
-        text-decoration: underline;
+        opacity: 1;
     }
 }
 
@@ -618,26 +622,39 @@ ul.product_list_widget {
     justify-content: space-between;
 
     li {
-        margin: 0 0 1em 0;
-        padding: 0;
+        margin: 0 0 .25em 0;
+        padding: 0 0 .25em 0;
+        line-height: 1.3;
         list-style-type: none;
-        width: 48%;
-        border-bottom: 1px solid #f2f2f2
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        &:last-of-type{
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border: none;
+        }
     }
 
     .attachment-woocommerce_thumbnail {
-        width: 100%;
-        margin-bottom: 1em;
+        width: 15%;
     }
 
     a {
         text-decoration: none;
         color: inherit;
+        &.remove {
+            color: red;
+        }
     }
 
     .product-title {
         font-weight: bold;
         display: block;
+    }
+    span.quantity {
+        display: block;
+        opacity: .5;
+        font-size: .8em;
     }
 }
 
@@ -653,7 +670,7 @@ textarea#order_comments {
 
 // Cat menu
 
-.widget {
+aside {
     .product-categories {
         margin: 0;
         padding: 0;
@@ -736,5 +753,30 @@ textarea#order_comments {
     }
     ul.products {
         margin: 0;
+    }
+}
+.widget_shopping_cart_content {
+    background-image: linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.1));
+    padding: 4%;
+    border-radius: 3px;
+    border-bottom: 10px solid rgba(0,0,0,.2);
+    ul {
+        background: rgba(255,255,255,.5);
+        padding: 4%;
+    }
+}
+.woocommerce-mini-cart__total {
+    text-align: right;
+    margin: 1em 0 .5em 0;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+}
+.woocommerce-mini-cart__buttons {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+    font-weight: normal;
+    text-decoration: none;
     }
 }
