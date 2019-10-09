@@ -88,7 +88,6 @@ require get_parent_theme_file_path( '/inc/widget.php' );
 require get_parent_theme_file_path( '/inc/optionspage.php' );
 
 // ACF
-require get_parent_theme_file_path( '/assets/acf/acf-fields.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-fields-gallery.php' );
 
 // WooCommerce

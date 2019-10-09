@@ -13,6 +13,7 @@
     </aside>
     <aside class="aside-right simple-grid-item-aside-small order-3">
       <?php get_template_part( 'template/page/aside', 'right' ); ?>
+      <?php simpleTheme_download(); ?>
     </aside>
   </div>
 </div>

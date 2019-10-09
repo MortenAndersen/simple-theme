@@ -1,9 +1,8 @@
 <?php
-
 function simpletheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce', array(
-		'thumbnail_image_width' => 150,
-		'single_image_width'    => 300,
+		'thumbnail_image_width' => 300,
+		'single_image_width'    => 500,
       'product_grid'          => array(
         'default_rows'    => 3,
         'min_rows'        => 2,
@@ -22,13 +21,13 @@ add_action( 'after_setup_theme', 'simpletheme_add_woocommerce_support' );
 function woo_related_products_limit() {
   global $product;
 
-	$args['posts_per_page'] = 5;
+	$args['posts_per_page'] = 4;
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'simpletheme_related_products_args' );
   function simpletheme_related_products_args( $args ) {
-	$args['posts_per_page'] = 5; // 4 related products
-	$args['columns'] = 5; // arranged in 2 columns
+	$args['posts_per_page'] = 4; // 4 related products
+	$args['columns'] = 4; // arranged in 2 columns
 	return $args;
 }
 
@@ -87,3 +86,11 @@ function simpletheme_woocommerce_catalog_orderby( $orderby ) {
     return $orderby;
 }
 add_filter( "woocommerce_catalog_orderby", "simpletheme_woocommerce_catalog_orderby", 20 );
+
+
+add_action( 'woocommerce_single_product_summary', 'your_function_name', 35 );
+
+function your_function_name() {
+// Your code
+	simpleTheme_download();
+}

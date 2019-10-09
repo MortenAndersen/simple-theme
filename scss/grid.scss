@@ -168,4 +168,26 @@ $ipad: 800px;
             grid-template-columns: repeat(4, 1fr);
         }
     }
+
+
+        @media (min-width: $phone) {
+         .flex-con.g4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1em;
+            .flex-item {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    @media (min-width:$ipad) {
+         .flex-con.g4 {
+            grid-gap: 3em;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
 }

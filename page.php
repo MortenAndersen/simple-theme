@@ -3,6 +3,7 @@
     <div class="l-wrap l-main--content">
         <div class="main">
         	<?php get_template_part( 'template/page/page', 'loop' ); ?>
+        	<?php simpleTheme_download(); ?>
         </div>
     </div>
 </div>

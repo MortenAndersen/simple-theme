@@ -8,7 +8,7 @@ function simpleTheme_site_header() {
     $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
     if ( has_custom_logo() ) {
-        echo '<div class="site-logo"><a href="' . esc_url( home_url( '/' ) ) . '"><img src="'. esc_url( $logo[0] ) .'"></a></div>';
+        echo '<div class="site-logo"><a href="' . esc_url( home_url( '/' ) ) . '"><img src="'. esc_url( $logo[0] ) . '" alt="logo"></a></div>';
     }
 
     if ( 'blank' !== get_header_textcolor() ) {
@@ -63,6 +63,14 @@ function simpleTheme_header_style() {
     }
 }
 
+// Date
+
+function simpleTheme_date() {
+    echo '<div class="simple-theme-time">';
+    the_time('d/m - Y');
+    echo '</div>';
+}
+
 // Search Results
 
 function simpleTheme_search_results() {
@@ -113,6 +121,31 @@ function simpleTheme_aside_right() {
     endif;
 }
 
+// Filer - Download
+
+function simpleTheme_download() {
+        // ACF
+        if( function_exists('acf_add_local_field_group') ):
+            if( get_field('filer_til_download') ):
+                echo '<div class="download-con">';
+                echo '<h5 class="widget-title widget-title-download">Download</h5>';
+                echo '<ul class="simple-theme-download">';
+                 while(the_repeater_field('filer_til_download')):
+                echo '<li>';
+                    $download = get_sub_field( 'fil' );
+                        echo '<a href="' . $download['url'] . '" target="_blank">' . $download['title'] . '</a>';
+                        if ( $download['caption'] ) {
+                            echo '<div class="download-caption small-txt">' . $download['caption'] . '</div>';
+                        }
+                echo '</li>';
+            endwhile;
+            echo '</ul>';
+            echo '</div>';
+            endif;
+        endif;
+        // end ACF
+}
+
 // class
 
 // Single class
@@ -138,18 +171,6 @@ function simpleTheme_aside_class() {
     }
 
 }
-
-// ACF Background image
-
-function simpleTheme_acf_background_image(){
-    if( function_exists('acf_add_local_field_group') ):
-        if( get_field('background_image') ):
-            echo '<style>';
-            echo 'body.custom-background {background-image: url("' . get_field('background_image') . '");}';
-            echo '</style>';
-        endif;
-    endif;
- }
 
 
 // ACF Gallery
@@ -239,7 +260,7 @@ function simpleTheme_copyright() {
         echo '<div class="background background-copyright">';
         echo '<div class="l-wrap l-wrap-copyright">';
         echo '<div class="copyright-con">';
-        echo '&copy; copyright - ' . get_option('simpletheme-copyright') . ' | by <a href="https://www.hjemmesider.dk" target="_blank" rel="nofollow">Hjemmesider.dk</a>';
+        echo '&copy; copyright - ' . get_option('simpletheme-copyright') . ' | by <a href="https://www.hjemmesider.dk" target="_blank" rel="nofollow noreferrer">Hjemmesider.dk</a>';
         echo '</div>';
         echo '</div>';
         echo '</div>';

@@ -127,10 +127,6 @@
     font-weight: bold;
 }
 
-
-
-
-
 .gallery:after {
     content: "";
     display: table;
@@ -139,8 +135,7 @@
 
 img.aligncenter,
 div.aligncenter,
-figure.aligncenter,
-img.wp-post-image {
+figure.aligncenter {
     display: block;
     margin: 1em auto;
 }
@@ -164,6 +159,9 @@ figure {
     max-width: 100%;
     height: auto;
     margin: 1em 0;
+    &.woocommerce-product-gallery__wrapper {
+        margin: 0;
+    }
 }
 
 p img.alignright,

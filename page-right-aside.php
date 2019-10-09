@@ -10,6 +10,7 @@
     </div>
     <aside class="aside-right simple-grid-item-aside order-1">
       <?php get_template_part( 'template/page/aside', 'right' ); ?>
+      <?php simpleTheme_download(); ?>
     </aside>
   </div>
 </div>

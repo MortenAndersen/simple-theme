@@ -14,7 +14,6 @@
 	}(jQuery));
 </script>
 <?php } ?>
-<?php simpleTheme_acf_background_image(); ?>
 <?php simpleTheme_html_body_footer(); ?>
 </body>
 </html>
