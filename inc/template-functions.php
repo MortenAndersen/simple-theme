@@ -146,7 +146,20 @@ function simpleTheme_download() {
         // end ACF
 }
 
-// class
+// Blog loop - Sticky posts
+
+function simpleTheme_blog_loop() {
+
+ $loop = new WP_Query( array( 'post__in'  => get_option('sticky_posts') ) );
+    echo '<ul class="stick-posts">';
+        while ( $loop->have_posts() ) : $loop->the_post();
+            echo '<li class="simple-theme-sticky"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+                simpleTheme_date();
+            echo '</li>';
+        endwhile;
+    echo '</ul>';
+
+}
 
 // Single class
 function simpleTheme_wrap_class() {

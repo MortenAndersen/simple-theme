@@ -1,4 +1,5 @@
 <?php get_template_part( 'template/sidebar/pre', 'footer' ); ?>
+<?php simpleTheme_blog_loop(); ?>
 <?php get_template_part( 'sidebar' ); ?>
 <?php simpleTheme_copyright(); ?>
 <?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
