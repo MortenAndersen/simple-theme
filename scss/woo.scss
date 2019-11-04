@@ -192,6 +192,18 @@ span.price,
     }
 }
 
+.woocommerce button[name=update_cart],
+.woocommerce button[name=apply_coupon] {
+    background-image: linear-gradient(to right, #4f6911, #adaf30);
+        color: #fff;
+        padding: .25em 1em;
+        transition: .5s all;
+        &:hover {
+        text-decoration: none;
+        background-image: linear-gradient(to left, #4f6911, #adaf30);
+    }
+}
+
 .variations {
     margin: 1em 0;
 
@@ -827,5 +839,20 @@ aside {
                 }
             }
         }
+    }
+}
+.added_to_cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+     background: darkorange;
+    color: #fff !important;
+    text-align: center;
+    box-shadow: 0 4px 2px -2px #978484;
+    opacity: .8;
+    transition: .5s all;
+    &:hover {
+        opacity: 1;
     }
 }
