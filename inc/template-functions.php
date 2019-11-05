@@ -30,14 +30,41 @@ function simpleTheme_site_header() {
 
 function simpleTheme_the_post_thumbnail() {
     $caption = get_the_post_thumbnail_caption();
-    if ( has_post_thumbnail() ) {
-        echo '<div class="content-images">';
+
+    if ( is_singular( 'person' ) ) {
+        echo '<div class="person-img-con">';
+        if ( has_post_thumbnail() ) {
+        echo '<div class="content-img person-img">';
         the_post_thumbnail( 'simpletheme-content-image' );
         if(!empty($caption)) {
             echo '<div class="img-caption">' . $caption . '</div>';
         }
         echo '</div>';
     }
+
+    echo '<div class="person-info">';
+    echo '<div class="person-info-inner">';
+    the_title( '<h1>', '</h1>');
+    simpleTheme_acf_person();
+
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+
+    }
+
+    else {
+
+    if ( has_post_thumbnail() ) {
+        echo '<div class="content-img">';
+        the_post_thumbnail( 'simpletheme-content-image' );
+        if(!empty($caption)) {
+            echo '<div class="img-caption">' . $caption . '</div>';
+        }
+        echo '</div>';
+    }
+}
+
 }
 
 // Header image
@@ -254,6 +281,28 @@ function simpleTheme_acf_gallery() {
     endif;
 }
 
+// ACF Person
+
+function simpleTheme_acf_person() {
+    if( function_exists('acf_add_local_field_group') ):
+        if( is_singular( 'person' ) && get_field('titel') || get_field('mobiltelefon') || get_field('telefon') || get_field('email') ) {
+            echo '<ul class="person--data design-list">';
+                if( get_field('titel') ) {
+                    echo '<li class="title">' . get_field('titel') . '</li>';
+                }
+                if( get_field('mobiltelefon') ) {
+                    echo '<li class="cell">' . get_field('mobiltelefon') . '</li>';
+                }
+                if( get_field('telefon') ) {
+                    echo '<li class="phone">' . get_field('telefon') . '</li>';
+                }
+                if( get_field('email') ) {
+                    echo '<li class="email"><a href="mailto:' . get_field('email') . '">' . get_field('email') . '</a></li>';
+                }
+            echo '</ul>';
+        }
+    endif;
+}
 
 // BackButton
 

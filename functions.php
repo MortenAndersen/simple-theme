@@ -84,6 +84,9 @@ require get_parent_theme_file_path( 'template/functions/theme-customize.php' );
 // Theme Widget
 require get_parent_theme_file_path( '/inc/widget.php' );
 
+// Theme Post type
+require get_parent_theme_file_path( '/inc/post-type.php' );
+
 // Theme Options
 require get_parent_theme_file_path( '/inc/optionspage.php' );
 

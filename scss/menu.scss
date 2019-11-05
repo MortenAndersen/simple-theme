@@ -314,6 +314,7 @@ nav {
         left: 0;
         padding: 0;
         background: rgba(255, 255, 255, 0.95);
+        background: #fff;
     }
 
     .all-menu ul ul ul {
@@ -365,7 +366,7 @@ nav {
 
     .all-menu li li a:hover {
         background: #233489de;
-        background-image: linear-gradient(to right, #233065, #ce801f80);
+        background-image: linear-gradient(to left, #184368, #083a59);
         color: #fff;
 
     }

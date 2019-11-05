@@ -1,0 +1,58 @@
+.person-img-con {
+    background: #7b756d;
+    color: #fff;
+    background: #083a59;
+
+    a {
+    	color: inherit;
+    }
+}
+.person-info {
+
+}
+
+    .person-img-con {
+        display: flex;
+    flex-flow: row wrap;
+    }
+.person-img,
+.person-info {
+    flex: 1 100%;
+
+}
+
+@media (min-width: 700px) {
+    .person-img {
+        flex: 1 60%;
+        max-width: 60%;
+
+        .img-caption,
+        .wp-caption-text {
+            text-align: left;
+        }
+
+        img {
+            float: left;
+        }
+    }
+
+    .person-info {
+        flex: 1 40%;
+        max-width: 40%;
+    }
+}
+.person--data {
+	.title {
+		font-weight: bold;
+		font-size: 120%;
+	}
+}
+.type-person {
+	padding-top: 1em;
+}
+.person-info-inner {
+    background: rgba(0,0,0,.1);
+    height: calc( 100% - 2em );
+    margin: 1em;
+    padding: 2em;
+}
