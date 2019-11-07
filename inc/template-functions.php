@@ -291,13 +291,29 @@ function simpleTheme_acf_person() {
                     echo '<li class="title">' . get_field('titel') . '</li>';
                 }
                 if( get_field('mobiltelefon') ) {
-                    echo '<li class="cell">' . get_field('mobiltelefon') . '</li>';
+                    echo '<li class="cell icon">';
+                     get_template_part( 'assets/images/icon/cell' );
+                    echo '<span class="data">' . get_field('mobiltelefon') . '</span></li>';
                 }
                 if( get_field('telefon') ) {
-                    echo '<li class="phone">' . get_field('telefon') . '</li>';
+                    echo '<li class="phone icon">';
+                    get_template_part( 'assets/images/icon/phone' );
+                    echo '<span class="data">' . get_field('telefon') . '</span></li>';
                 }
                 if( get_field('email') ) {
-                    echo '<li class="email"><a href="mailto:' . get_field('email') . '">' . get_field('email') . '</a></li>';
+                    echo '<li class="email icon">';
+                    get_template_part( 'assets/images/icon/mail' );
+                    echo '<a href="mailto:' . get_field('email') . '">' . get_field('email') . '</a></li>';
+                }
+                if( get_field('linkedin') ) {
+                    echo '<li class="phone icon">';
+                    get_template_part( 'assets/images/icon/linkedin' );
+                    echo '<a href="' . get_field('linkedin') . '" target="_blank">Linkedin</a></li>';
+                }
+                if( get_field('facebook') ) {
+                    echo '<li class="phone icon">';
+                    get_template_part( 'assets/images/icon/facebook' );
+                    echo '<a href="' . get_field('facebook') . '" target="_blank">facebook</a></li>';
                 }
             echo '</ul>';
         }

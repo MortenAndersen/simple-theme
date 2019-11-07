@@ -7,9 +7,7 @@
                 }
             }
             .current_page_ancestor {
-                a {
-                    background: rgba(0, 0, 0, .1);
-                }
+
             }
         }
         .current-menu-item > a {
@@ -21,7 +19,8 @@
         ul ul {
             .current_page_item {
                 a {
-                     background-image: linear-gradient(to left,#233065, #ce801f80);
+                    background-image: linear-gradient(to right, #184368, #083a59);
+                     color: #fff;
                      &:before {
                         content: '\2014';
                         padding-right: 5px;

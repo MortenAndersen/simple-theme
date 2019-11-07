@@ -87,6 +87,9 @@ require get_parent_theme_file_path( '/inc/widget.php' );
 // Theme Post type
 require get_parent_theme_file_path( '/inc/post-type.php' );
 
+// Shortcode
+require get_parent_theme_file_path( '/inc/person-shortcode.php' );
+
 // Theme Options
 require get_parent_theme_file_path( '/inc/optionspage.php' );
 

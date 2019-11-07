@@ -9,6 +9,13 @@
 }
 .person-info {
 
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
 }
 
     .person-img-con {
@@ -46,6 +53,10 @@
 		font-weight: bold;
 		font-size: 120%;
 	}
+    li {
+        overflow: hidden;
+        margin: 5px 0;
+    }
 }
 .type-person {
 	padding-top: 1em;
