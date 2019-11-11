@@ -315,6 +315,11 @@ function simpleTheme_acf_person() {
                     get_template_part( 'assets/images/icon/facebook' );
                     echo '<a href="' . get_field('facebook') . '" target="_blank">facebook</a></li>';
                 }
+                if( get_field('hjemmeside') && get_field('klik_tekst') ) {
+                    echo '<li class="hjemmeside icon">';
+                    get_template_part( 'assets/images/icon/www' );
+                    echo '<a href="' . get_field('hjemmeside') . '" target="_blank">' . get_field('klik_tekst') . '</a></li>';
+                }
             echo '</ul>';
         }
     endif;
