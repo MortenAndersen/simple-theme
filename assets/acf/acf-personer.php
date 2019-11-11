@@ -112,6 +112,48 @@ acf_add_local_field_group(array(
 			'default_value' => '',
 			'placeholder' => '',
 		),
+		array(
+			'key' => 'field_5dc96879fdffa',
+			'label' => 'Hjemmeside',
+			'name' => 'hjemmeside',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5dc96a619d454',
+			'label' => 'Klik tekst',
+			'name' => 'klik_tekst',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5dc96879fdffa',
+						'operator' => '!=empty',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
 	),
 	'location' => array(
 		array(
