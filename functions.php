@@ -95,6 +95,7 @@ require get_parent_theme_file_path( '/inc/optionspage.php' );
 
 // ACF
 require get_parent_theme_file_path( '/assets/acf/acf-fields-gallery.php' );
+require get_parent_theme_file_path( '/assets/acf/acf-personer.php' );
 
 // WooCommerce
 require get_parent_theme_file_path( '/inc/woo-functions.php' );
