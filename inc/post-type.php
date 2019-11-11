@@ -12,7 +12,7 @@ if( function_exists('acf_add_local_field_group') ):
 	    	'person',
 	    	array(
 	    		'labels' => array(
-	    			'name' => __('Person', 'simpletheme'),
+	    			'name' => __('Personer', 'simpletheme'),
 	    			'singular_name' => __('Peron', 'simpletheme')
 	    		),
 	    		'public' => true,
@@ -22,7 +22,8 @@ if( function_exists('acf_add_local_field_group') ):
 	    			'title',
 	    			'editor',
 	    			'excerpt',
-	    			'thumbnail'
+	    			'thumbnail',
+	    			'page-attributes'
 	    		),
 	    		'show_in_rest' => true,
 	    		'rewrite' => array(

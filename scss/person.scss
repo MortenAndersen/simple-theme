@@ -2,6 +2,7 @@
     background: #7b756d;
     color: #fff;
     background: #083a59;
+    margin-bottom: 2em;
 
     a {
     	color: inherit;
@@ -27,16 +28,23 @@
     flex: 1 100%;
 
 }
+.person-img {
+    position: relative;
+    .img-caption {
+        position: absolute;
+    bottom: 2em;
+    padding: 1em;
+    left: 0;
+    right: 0;
+    background: rgba(7, 52, 80,.7);
+    text-align: left;
+    }
+}
 
 @media (min-width: 700px) {
     .person-img {
         flex: 1 60%;
         max-width: 60%;
-
-        .img-caption,
-        .wp-caption-text {
-            text-align: left;
-        }
 
         img {
             float: left;
@@ -51,11 +59,17 @@
 .person--data {
 	.title {
 		font-weight: bold;
-		font-size: 120%;
+		font-size: 110%;
+        .personer-shortcode & {
+            font-weight: normal;
+        }
 	}
     li {
         overflow: hidden;
         margin: 5px 0;
+        &.title {
+            margin-bottom: 1em;
+        }
     }
 }
 .type-person {
@@ -63,7 +77,19 @@
 }
 .person-info-inner {
     background: rgba(0,0,0,.1);
-    height: calc( 100% - 2em );
-    margin: 1em;
-    padding: 2em;
+    height: calc( 100% - 2vw );
+    margin: 1vw;
+    padding: 2vw;
+}
+
+.personer-shortcode {
+    h4 {
+        margin: .1em 0;
+    }
+    .person--data {
+        li.title {
+            margin: 0 0 .5em 0;
+
+        }
+    }
 }

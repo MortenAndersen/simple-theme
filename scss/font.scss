@@ -203,31 +203,6 @@ header {
     }
 }
 
-.icon {
-    line-height: 30px;
-
-    svg {
-        height: 30px;
-        width: 30px;
-        float: left;
-        border: 1px solid rgba(255,255,255,.15);
-        background: rgba(255,255,255,.1);
-        padding: 5px;
-        margin: 0 10px 0 0;
-
-    }
-}
-
 .data {
     float: left;
-}
-
-.cell-svg,
-.phone-svg,
-.mail-svg,
-.linkedin-svg,
-.facebook-svg {
-    fill: #fff;
-    opacity: .6
-
 }
