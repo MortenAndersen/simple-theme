@@ -28,10 +28,12 @@ echo '<div id="content" class="background background-main">';
     </aside>
   </div>
 
-
-<div class="l-wrap l-personer">
-<?php echo do_shortcode($personer);?>
 </div>
 
+<div class="background background-personer">
+  <div class="l-wrap l-personer">
+    <?php echo do_shortcode($personer);?>
+  </div>
 </div>
+
 <?php get_footer(); ?>
