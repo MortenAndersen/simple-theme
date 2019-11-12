@@ -3,6 +3,9 @@ textarea {
     outline: none;
     padding: .5em;
     border: 1px solid #d7d7d7;
+    aside & {
+        height: 100px;
+    }
 }
 
 input {

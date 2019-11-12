@@ -223,6 +223,10 @@ footer {
     .simple-grid-item-main {
         flex: 1 70%;
         max-width: 70%;
+        .page-template-page-contact & {
+            flex: 1 55%;
+        max-width: 55%;
+        }
     }
 
     .simple-grid-item-main-small {
@@ -233,6 +237,10 @@ footer {
     .simple-grid-item-aside {
         flex: 1 25%;
         max-width: 25%;
+        .page-template-page-contact & {
+            flex: 1 40%;
+        max-width: 40%;
+        }
     }
 
     .simple-grid-item-aside-small {
