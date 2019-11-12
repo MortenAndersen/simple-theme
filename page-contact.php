@@ -2,18 +2,36 @@
 		Template Name: Contact
 		*/
 		?>
-<?php get_header(); ?>
-<div id="content" class="background background-main">
+<?php
+get_header();
+
+  $kontaktformular = get_field('kontaktformular');
+  $personer = get_field('personer');
+
+
+echo '<div id="content" class="background background-main">';
+  if( get_field('google_maps') ) {
+    echo '<div class="googlemap-con">';
+      the_field( 'google_maps' );
+    echo '</div>';
+  }
+?>
+
   <div class="l-wrap l-main--content simple-grid-con space-between">
     <div class="main simple-grid-item-main">
       <?php get_template_part( 'template/page/page', 'loop' ); ?>
     </div>
     <aside class="aside-right simple-grid-item-aside order-1">
+      <?php echo do_shortcode($kontaktformular);?>
       <?php get_template_part( 'template/page/aside', 'right' ); ?>
       <?php simpleTheme_download(); ?>
     </aside>
   </div>
-  <?php the_field('google_map'); ?>
-  <?php the_field('kontakt_sidefod'); ?>
+
+
+<div class="l-wrap l-personer">
+<?php echo do_shortcode($personer);?>
+</div>
+
 </div>
 <?php get_footer(); ?>
