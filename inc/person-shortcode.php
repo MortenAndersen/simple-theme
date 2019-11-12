@@ -1,15 +1,23 @@
 <?php
 
+// Grid
+
+
 add_shortcode('personer', 'simpleTheme_personer');
 function simpleTheme_personer($atts) {
   global $post;
   ob_start();
 
+  // define attributes and their defaults
+    extract(shortcode_atts(array('grid' => 'g3' ), $atts));
+
  $loop = new WP_Query( array( 'post_type' => 'person', 'orderby' => 'menu_order', 'order' => 'ASC') );
+
+
  if ( $loop->have_posts() ) {
- 	echo '<div class="personer-shortcode flex-con g4">';
+ 	echo '<div class="personer-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
- 	echo '<div class="item">';
+ 	echo '<div class="flex-item">';
  		if ( has_post_thumbnail() ) {
         echo '<div class="shortcode-person-img">';
         the_post_thumbnail( 'simpletheme-content-image' );
@@ -33,11 +41,14 @@ function simpleTheme_personerLink($atts) {
   global $post;
   ob_start();
 
+  // define attributes and their defaults
+    extract(shortcode_atts(array('grid' => 'g3' ), $atts));
+
  $loop = new WP_Query( array( 'post_type' => 'person', 'orderby' => 'menu_order', 'order' => 'ASC') );
  if ( $loop->have_posts() ) {
- 	echo '<div class="personer-shortcode flex-con g4">';
+ 	  echo '<div class="personer-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
- 	echo '<div class="item">';
+ 	echo '<div class="flex-item">';
  		if ( has_post_thumbnail() ) {
         echo '<div class="shortcode-person-img">';
         the_post_thumbnail( 'simpletheme-content-image' );
