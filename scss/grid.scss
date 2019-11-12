@@ -171,10 +171,13 @@ $ipad: 800px;
 
 
         @media (min-width: $phone) {
-         .flex-con.g4 {
+        .flex-con.g2,
+        .flex-con.g3,
+        .flex-con.g4,
+        .flex-con.g5 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 1em;
+            grid-gap: 2em;
             .flex-item {
                 width: 100%;
                 max-width: 100%;
@@ -184,9 +187,17 @@ $ipad: 800px;
     }
 
     @media (min-width:$ipad) {
+        .flex-con.g3 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 3em;
+        }
          .flex-con.g4 {
             grid-gap: 3em;
             grid-template-columns: repeat(4, 1fr);
+        }
+        .flex-con.g5 {
+            grid-gap: 2em;
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 
