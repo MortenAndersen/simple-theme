@@ -76,6 +76,9 @@ function simpletheme_localize_theme() {
 
 add_action( 'after_setup_theme', 'simpletheme_localize_theme' );
 
+// Tilføjer excerpt til pages
+add_post_type_support( 'page', 'excerpt' );
+
 // ---------------------------------------------------
 
 // Theme options
@@ -89,6 +92,9 @@ require get_parent_theme_file_path( '/inc/post-type.php' );
 
 // Shortcode
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
+
+// Box
+require get_parent_theme_file_path( '/inc/box.php' );
 
 // Theme Options
 require get_parent_theme_file_path( '/inc/optionspage.php' );

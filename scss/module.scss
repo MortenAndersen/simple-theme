@@ -128,27 +128,33 @@ figure {
 .frontpage-grid {
     clear: both;
 }
+
 .simple-archive {
     a {
         text-decoration: none;
         color: inherit;
     }
+
     img {
         width: 100%;
     }
 }
+
 .simple-theme-time {
     margin: .5em 0;
 }
+
 .simple-theme-download {
     margin: 0;
     padding: 0;
+
     li {
         margin: 0 0 .5em 0;
         padding: 0;
         list-style-type: none;
     }
 }
+
 .download-con {
     margin-bottom: 1em;
 }
@@ -157,6 +163,7 @@ figure {
     position: relative;
     height: 400px;
     width: 100%;
+
     iframe {
         position: absolute;
         top: 0;
@@ -165,7 +172,27 @@ figure {
         height: 100% !important;
     }
 }
+
 .contact-con {
     align-self: center;
     text-align: center;
+}
+
+.box-shortcode {
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.box-img {
+    overflow: hidden;
+
+    img {
+        float: left;
+    }
 }
