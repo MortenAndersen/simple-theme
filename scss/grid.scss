@@ -202,3 +202,13 @@ $ipad: 800px;
     }
 
 }
+
+.flex-con.g1 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            .flex-item {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
