@@ -12,6 +12,7 @@ function simpleTheme_box($atts) {
  	'post_type' => 'page',
  	'orderby' => 'post__in',
  	'post__in' => $id_array,
+
  ) );
 
 
