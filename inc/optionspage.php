@@ -11,6 +11,14 @@ function simple_settings() {
     add_settings_field("simpletheme-copyright", "Copyright", "simple_copyright_display", "simple", "section");
     register_setting("section", "simpletheme-copyright");
 
+     // Mail
+    add_settings_field("simpletheme-mail", "Mail", "simple_mail_display", "simple", "section");
+    register_setting("section", "simpletheme-mail");
+
+    // Phone
+    add_settings_field("simpletheme-phone", "Phone", "simple_phone_display", "simple", "section");
+    register_setting("section", "simpletheme-phone");
+
     // HTML bottom
     add_settings_field("simpletheme-html-bottom", "HTML body bottom", "simple_html_bottom_display", "simple", "section");
     register_setting("section", "simpletheme-html-bottom");
@@ -31,6 +39,16 @@ function simple_radio_display() {
 // Copyright
 function simple_copyright_display() {
     echo '<input type="text" name="simpletheme-copyright" value="' . esc_attr( get_option('simpletheme-copyright'), true) . '">';
+}
+
+// Mail
+function simple_mail_display() {
+    echo '<input type="text" name="simpletheme-mail" value="' . esc_attr( get_option('simpletheme-mail'), true) . '">';
+}
+
+// Phone
+function simple_phone_display() {
+    echo '<input type="text" name="simpletheme-phone" value="' . esc_attr( get_option('simpletheme-phone'), true) . '">';
 }
 
 // HTML bottom

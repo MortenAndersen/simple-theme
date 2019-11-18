@@ -17,7 +17,8 @@
 <?php
 // Option page
 	switch (get_option('simpletheme-radio-menu')) {
-		case '1': ?>
+		case '1':
+		case '2': ?>
 
 <header role="banner">
 <?php get_template_part( 'template/sidebar/info-bar' ); ?>
@@ -28,9 +29,6 @@
 
 
 		<?php	break;
-		case '2':
-			$menu_class = 'menu-right';
-			break;
 		case '3': ?>
 <?php get_template_part( 'template/sidebar/info-bar' ); ?>
 <header role="banner">

@@ -351,15 +351,33 @@ function simpleTheme_copyright() {
 }
 
 // HTML body footer (Google analytics etc.)
-
 function simpleTheme_html_body_footer() {
     if( get_option('simpletheme-html-bottom') ):
         echo get_option('simpletheme-html-bottom');
     endif;
 }
 
-// Cart
+// Site mail
+function simpleTheme_mail() {
+    if( get_option('simpletheme-mail') ):
+        echo '<span class="icon icon-mail">';
+        get_template_part( 'assets/images/icon/mail' );
+        echo '<a href="mailto:' . get_option('simpletheme-mail') . '">' . get_option('simpletheme-mail') . '</a>';
+        echo '</span>';
+    endif;
+}
 
+// Site phone
+function simpleTheme_phone() {
+    if( get_option('simpletheme-phone') ):
+        echo '<span class="icon icon-phone">';
+        get_template_part( 'assets/images/icon/phone' );
+        echo '<a href="tel:' . get_option('simpletheme-phone') . '">' . get_option('simpletheme-phone') . '</a>';
+        echo '</span>';
+    endif;
+}
+
+// Cart
 function simpleTheme_small_cart() {
 echo '<a class="cart-customlocation" href="' . wc_get_cart_url() . '" title="' .  __( 'View your shopping cart' ) . '">' . sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
 }
