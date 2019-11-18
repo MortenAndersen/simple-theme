@@ -7,6 +7,9 @@
 		case '2':
 			$menu_class = 'menu-right';
 			break;
+		case '3':
+			$menu_class = 'menu-right logo-left';
+			break;
 	}
 ?>
 

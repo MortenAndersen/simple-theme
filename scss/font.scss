@@ -121,6 +121,10 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
+    .top-container-widget & {
+        width: 100%;
+        float: left;
+    }
 }
 
 .img-caption,

@@ -22,6 +22,8 @@ function simple_radio_display() {
     echo '<input type="radio" name="simpletheme-radio-menu" value="1"' . checked(1, get_option('simpletheme-radio-menu'), true) . '>';
     echo 'Right ';
     echo '<input type="radio" name="simpletheme-radio-menu" value="2"' . checked(2, get_option('simpletheme-radio-menu'), true) . '>';
+    echo 'Logo / menu ';
+    echo '<input type="radio" name="simpletheme-radio-menu" value="3"' . checked(3, get_option('simpletheme-radio-menu'), true) . '>';
     echo '</p>';
 
 }
