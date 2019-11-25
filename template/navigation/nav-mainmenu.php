@@ -3,12 +3,15 @@
 	switch (get_option('simpletheme-radio-menu')) {
 		case '1':
 			$menu_class = 'menu-default';
+			$menu_type = 'width-menu';
 			break;
 		case '2':
 			$menu_class = 'menu-right';
+			$menu_type = 'width-menu';
 			break;
 		case '3':
 			$menu_class = 'menu-right logo-left';
+			$menu_type = 'small-menu';
 			break;
 	}
 ?>
@@ -23,7 +26,7 @@
 ?>
 <div id="navbar" class="menu-con background-2 <?php echo $menu_class ?>">
 <div class="l-wrap l-menu--content">
-<nav aria-labelledby="hovedmenu-label" class="all-menu js-nav-toggle">
+<nav aria-labelledby="hovedmenu-label" class="all-menu js-nav-toggle <?php echo $menu_type ?>">
 	<span class="screen-reader-text" id="hovedmenu-label">Hovedmenu</span>
 <?php wp_nav_menu( $main_nav ); ?>
 <?php if ( is_active_sidebar( 'sidebar-infobar' ) || is_active_sidebar( 'sidebar-mobilemenu-widget' )  ) { ?>

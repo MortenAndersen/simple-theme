@@ -31,6 +31,32 @@ if( function_exists('acf_add_local_field_group') ):
 	    		),
 	    	)
 	    );
+
+	     register_post_type(
+	    	'samarbejde',
+	    	array(
+	    		'labels' => array(
+	    			'name' => __('Samarbejde', 'simpletheme'),
+	    			'singular_name' => __('Samarbejde', 'simpletheme')
+	    		),
+	    		'public' => true,
+	    		'publicly_queryable' => false,
+	    		'exclude_from_search' => true,
+	    		'menu_icon' => 'dashicons-groups',
+	    		'supports' => array(
+	    			'title',
+	    			'editor',
+	    			'excerpt',
+	    			'thumbnail',
+	    			'page-attributes'
+	    		),
+	    		'show_in_rest' => true,
+	    		'rewrite' => array(
+	    			'slug' => 'box'
+	    		),
+	    	)
+	    );
+
 	}
 
 	function simpleTheme_posttype_function() {

@@ -26,12 +26,25 @@ function simple_settings() {
 
 // Menu
 function simple_radio_display() {
-    echo '<p>Left (default) ';
-    echo '<input type="radio" name="simpletheme-radio-menu" value="1"' . checked(1, get_option('simpletheme-radio-menu'), true) . '>';
+    echo '<p>';
+
+    echo '<input type="radio" name="simpletheme-radio-menu" value="1"';
+    checked(1, get_option('simpletheme-radio-menu'), true);
+    echo '>';
+    echo 'Left (default) ';
+    echo '<br />';
+
+    echo '<input type="radio" name="simpletheme-radio-menu" value="2"';
+    checked(2, get_option('simpletheme-radio-menu'), true);
+    echo '>';
     echo 'Right ';
-    echo '<input type="radio" name="simpletheme-radio-menu" value="2"' . checked(2, get_option('simpletheme-radio-menu'), true) . '>';
+    echo '<br />';
+
+    echo '<input type="radio" name="simpletheme-radio-menu" value="3"';
+    checked(3, get_option('simpletheme-radio-menu'), true);
+    echo '>';
     echo 'Logo / menu ';
-    echo '<input type="radio" name="simpletheme-radio-menu" value="3"' . checked(3, get_option('simpletheme-radio-menu'), true) . '>';
+
     echo '</p>';
 
 }

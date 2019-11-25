@@ -92,6 +92,7 @@ require get_parent_theme_file_path( '/inc/post-type.php' );
 
 // Shortcode
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
+require get_parent_theme_file_path( '/inc/samarbejde-shortcode.php' );
 
 // Box
 require get_parent_theme_file_path( '/inc/box.php' );
@@ -105,6 +106,7 @@ require get_parent_theme_file_path( '/assets/acf/acf-personer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-kontakt.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-filer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-simple.php' );
+require get_parent_theme_file_path( '/assets/acf/acf-samarbejde.php' );
 
 // WooCommerce
 require get_parent_theme_file_path( '/inc/woo-functions.php' );
