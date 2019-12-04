@@ -93,6 +93,7 @@ require get_parent_theme_file_path( '/inc/post-type.php' );
 // Shortcode
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
 require get_parent_theme_file_path( '/inc/samarbejde-shortcode.php' );
+require get_parent_theme_file_path( '/inc/contactinfo-shortcode.php' );
 
 // Box
 require get_parent_theme_file_path( '/inc/box.php' );

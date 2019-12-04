@@ -80,6 +80,25 @@ footer p {
     line-height: 1.25;
 }
 
+.background-pre-footer .widget-title {
+        text-align: center;
+        border-bottom: 1px solid #cacaca;
+        margin-bottom: 2em;
+        padding-bottom: .3em;
+        position: relative;
+        &::after {
+            content: ' ';
+    position: absolute;
+    left: 50%;
+    width: 360px;
+    bottom: -1px;
+    transform: translateX(-50%);
+    background: #4a4a4a;
+    height: 1px;
+}
+
+    }
+
 .widget-title-important {
     margin: 0;
     font-size: .95em;

@@ -39,14 +39,35 @@
 
 .icon.icon-mail,
 .icon.icon-phone {
+    display: inline-block;
     padding-right: 1em;
+    footer & {
+        display: block;
+        clear: both;
+        padding-right: 0;
+    }
 
     svg {
         margin-right: 5px;
+        footer {
+
+        }
     }
 
     a {
         text-decoration: none;
         color: inherit;
+        float: left;
+    }
+}
+.hjemmeside-kontakt {
+    line-height: 1;
+}
+.main {
+    .hjemmeside-kontakt {
+        background: #243887;
+        background-image: linear-gradient(#083a59, #184368);
+        padding: 1em;
+        color: #fff;
     }
 }
