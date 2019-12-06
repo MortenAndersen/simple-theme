@@ -1,7 +1,13 @@
 <?php
 	if ( is_active_sidebar( 'sidebar-top-container' ) ) {
-		echo '<div class="width-top">';
+		echo '<div class="width-top top-normal">';
 			dynamic_sidebar( 'sidebar-top-container' );
+		echo '</div>';
+	}
+
+		if ( is_active_sidebar( 'sidebar-top-banner' ) ) {
+		echo '<div class="width-top top-banner">';
+			dynamic_sidebar( 'sidebar-top-banner' );
 		echo '</div>';
 	}
 

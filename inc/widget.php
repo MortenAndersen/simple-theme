@@ -136,17 +136,6 @@ function simpletheme_widgets_init() {
 	);
 	register_sidebar(
 		array(
-			'name'          => __( 'Top container bounceInUp', 'simpletheme' ),
-			'id'            => 'sidebar-top-animate-bounceinup',
-			'description'   => __( 'Add widgets here to appear in your Animate bounceInUp Top Container.', 'simpletheme' ),
-			'before_widget' => '<div id="%1$s" class="widget top-container-widget animate animate-bounceInUp">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
-		)
-	);
-	register_sidebar(
-		array(
 			'name'          => __( 'Top container banner', 'simpletheme' ),
 			'id'            => 'sidebar-top-banner',
 			'description'   => __( 'Add gallery here to appear in your banner.', 'simpletheme' ),
@@ -154,17 +143,6 @@ function simpletheme_widgets_init() {
 			'after_widget'  => '</div>',
 			'before_title'  => '<div class="widget-title screen-reader-text">',
 			'after_title'   => '</div>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => __( 'Top container banner - aside', 'simpletheme' ),
-			'id'            => 'top-banner-aside',
-			'description'   => __( 'Add text to gallery.', 'simpletheme' ),
-			'before_widget' => '<div id="%1$s" class="widget top-container-widget banner-aside">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="widget-title">',
-			'after_title'   => '</h5>',
 		)
 	);
 	register_sidebar(

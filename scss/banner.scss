@@ -1,7 +1,6 @@
 .banner {
     overflow: hidden;
 
-
     img {
         width: 100%;
     }
@@ -14,34 +13,9 @@
     }
 }
 
-.banner-img-aside {
-    background: #7b756d;
-    color: #fff;
-    overflow: hidden;
-}
-
-.top-banner-aside {
-    .widget {
-        padding: 1em;
-    }
-
-}
 
 @media (min-width: 769px) {
     .banner {
         height: 33vh;
-    }
-
-    .top-banner-left {
-        width: 70%;
-        float: left;
-    }
-
-    .top-banner-aside {
-        height: 33vh;
-
-        .widget {
-            padding: 1em 2em;
-        }
     }
 }
