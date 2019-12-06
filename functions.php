@@ -21,8 +21,6 @@ function simpletheme_add_google_fonts() {
 	}
 add_action( 'wp_enqueue_scripts', 'simpletheme_add_google_fonts' );
 
-
-
 // ---------------------------------------------------
 if (!function_exists( 'simpletheme_setup' )):
 
@@ -94,6 +92,7 @@ require get_parent_theme_file_path( '/inc/post-type.php' );
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
 require get_parent_theme_file_path( '/inc/samarbejde-shortcode.php' );
 require get_parent_theme_file_path( '/inc/contactinfo-shortcode.php' );
+require get_parent_theme_file_path( '/inc/post-shortcode.php' );
 
 // Box
 require get_parent_theme_file_path( '/inc/box.php' );

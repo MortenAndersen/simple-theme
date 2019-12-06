@@ -1,3 +1,8 @@
+.personer-shortcode.g1 {
+ .flex-item {
+        margin-bottom: 2em;
+    }
+}
 .person-img-con {
     background: #7b756d;
     color: #fff;
@@ -108,7 +113,7 @@
 
 .shortcode-person-img {
     overflow: hidden;
-
+box-shadow: 0 0 10px #00000038;
     img {
         float: left;
         width: 100%;
@@ -118,5 +123,8 @@
 @media (min-width: 700px) {
     .personer-shortcode {
         margin: 0 -.5em;
+        &.g1 {
+            margin: 0;
+        }
     }
 }

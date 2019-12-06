@@ -11,7 +11,13 @@ function simpleTheme_personer($atts) {
   // define attributes and their defaults
     extract(shortcode_atts(array('grid' => 'g3' ), $atts));
 
- $loop = new WP_Query( array( 'post_type' => 'person', 'orderby' => 'menu_order', 'order' => 'ASC') );
+ $loop = new WP_Query( array(
+  'post_type' => 'person',
+  'orderby' => 'menu_order',
+  'order' => 'ASC',
+  'posts_per_page' => -1
+  )
+);
 
 
  if ( $loop->have_posts() ) {
@@ -44,7 +50,14 @@ function simpleTheme_personerLink($atts) {
   // define attributes and their defaults
     extract(shortcode_atts(array('grid' => 'g3' ), $atts));
 
- $loop = new WP_Query( array( 'post_type' => 'person', 'orderby' => 'menu_order', 'order' => 'ASC') );
+ $loop = new WP_Query( array(
+  'post_type' => 'person',
+  'orderby' => 'menu_order',
+  'order' => 'ASC',
+  'posts_per_page' => -1
+  )
+);
+
  if ( $loop->have_posts() ) {
  	  echo '<div class="personer-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();

@@ -10,8 +10,10 @@ function simpleTheme_samarbejde($atts) {
     extract(shortcode_atts(array('grid' => 'g3' ), $atts));
 
  $loop = new WP_Query( array(
- 	'post_type' => 'samarbejde'
- ) );
+ 	'post_type' => 'samarbejde',
+  'posts_per_page' => -1
+ )
+);
 
 
  if ( $loop->have_posts() ) {
