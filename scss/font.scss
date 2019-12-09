@@ -133,6 +133,10 @@ footer p {
 
 a {
     color: #233489;
+    &.edit-post {
+        color: red;
+        font-weight: bold;
+    }
 }
 
 a:hover {
