@@ -90,6 +90,20 @@ acf_add_local_field_group(array(
 				'value' => 'page-left-right-aside.php',
 			),
 		),
+		array(
+		array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-contact.php',
+			),
+		),
+		array(
+	array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-contact-two.php',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',

@@ -146,11 +146,11 @@ $ipad: 800px;
 }
 
 @media (min-width: $phone) {
-.grid-con {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-}
+    .grid-con {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+    }
 }
 
 @supports (display: grid) {
@@ -170,7 +170,8 @@ $ipad: 800px;
     }
 
 
-        @media (min-width: $phone) {
+    @media (min-width: $phone) {
+
         .flex-con.g2,
         .flex-con.g3,
         .flex-con.g4,
@@ -178,6 +179,7 @@ $ipad: 800px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 2em;
+
             .flex-item {
                 width: 100%;
                 max-width: 100%;
@@ -191,10 +193,12 @@ $ipad: 800px;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 3em;
         }
-         .flex-con.g4 {
+
+        .flex-con.g4 {
             grid-gap: 3em;
             grid-template-columns: repeat(4, 1fr);
         }
+
         .flex-con.g5 {
             grid-gap: 2em;
             grid-template-columns: repeat(5, 1fr);
@@ -204,11 +208,26 @@ $ipad: 800px;
 }
 
 .flex-con.g1 {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            .flex-item {
-                width: 100%;
-                max-width: 100%;
-                margin: 0;
-            }
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    .flex-item {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 2em 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
+    }
+    aside & {
+        .flex-item {
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 1em;
+            &:last-of-type {
+            margin-bottom: 0;
+            border: none;
+        }
+        }
+    }
+}

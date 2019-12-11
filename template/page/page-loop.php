@@ -9,6 +9,8 @@
 
 if ( is_single() && !is_singular( 'person' ) ) {
 	simpleTheme_date();
+	echo '<span>Kategorier: </span>' . get_the_category_list( ', ' ) . '<br />';
+	the_tags( 'Tags: ', ', ' );
 }
 
 the_content();

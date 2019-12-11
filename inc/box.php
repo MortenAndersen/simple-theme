@@ -20,7 +20,7 @@ function simpleTheme_box($atts) {
  	echo '<div class="box-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
  	echo '<div class="flex-item">';
- 	echo '<a href="' . get_the_permalink() . '">';
+ 	echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
  		if ( has_post_thumbnail() ) {
         echo '<div class="box-img">';
         the_post_thumbnail( 'simpletheme-content-image' );

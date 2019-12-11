@@ -47,6 +47,13 @@ function simple_hide_category_count() {
 // No count
 }
 
+
+// Cart
+function simpleTheme_small_cart() {
+
+echo '<a class="cart-customlocation" href="' . wc_get_cart_url() . '" title="' .  __( 'View your shopping cart' ) . '">' . sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
+}
+
 /**
  * Show cart contents / total Ajax
  */
@@ -63,6 +70,7 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['a.cart-customlocation'] = ob_get_clean();
 	return $fragments;
 }
+
 
 // Fjerner overskrift i description (h2)
 add_filter('woocommerce_product_description_heading', '__return_empty_string');

@@ -325,6 +325,18 @@ function simpleTheme_acf_person() {
     endif;
 }
 
+function simpleTheme_acf_person_pp() {
+    if( function_exists('acf_add_local_field_group') ):
+        if( get_field('titel') ) {
+            echo '<ul class="person--data design-list">';
+                if( get_field('titel') ) {
+                    echo '<li class="title">' . get_field('titel') . '</li>';
+                }
+            echo '</ul>';
+        }
+    endif;
+}
+
 // BackButton
 
 function simpleTheme_go_back() {
@@ -375,11 +387,6 @@ function simpleTheme_phone() {
         echo '<a href="tel:' . get_option('simpletheme-phone') . '">' . get_option('simpletheme-phone') . '</a>';
         echo '</span>';
     endif;
-}
-
-// Cart
-function simpleTheme_small_cart() {
-echo '<a class="cart-customlocation" href="' . wc_get_cart_url() . '" title="' .  __( 'View your shopping cart' ) . '">' . sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
 }
 
 // Comments

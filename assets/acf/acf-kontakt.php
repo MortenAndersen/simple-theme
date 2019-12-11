@@ -72,6 +72,13 @@ acf_add_local_field_group(array(
 				'value' => 'page-contact.php',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_template',
+				'operator' => '==',
+				'value' => 'page-contact-two.php',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'normal',

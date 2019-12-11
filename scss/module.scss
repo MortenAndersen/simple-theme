@@ -221,3 +221,12 @@ figure {
 .no-logo {
     text-align: center;
 }
+.image-zoom {
+    overflow: hidden;
+}
+.image-zoom img {
+    transition: 1s all;
+}
+.image-zoom:hover img {
+    transform: scale(1.05);
+}
