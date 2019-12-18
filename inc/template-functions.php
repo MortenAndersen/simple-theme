@@ -91,13 +91,23 @@ function simpleTheme_header_style() {
 }
 
 // Date
-
-function simpleTheme_date() {
-    echo '<div class="simple-theme-time">';
-    the_time('d/m - Y');
-    echo '</div>';
+if ( ! function_exists ( 'simpleTheme_date' ) ) {
+    function simpleTheme_date() {
+        echo '<div class="simple-theme-time">';
+            the_time('d/m - Y');
+        echo '</div>';
+    }
 }
 
+// Cat & Tags
+if ( ! function_exists ( 'simleTheme_cat_tag' ) ) {
+    function simleTheme_cat_tag() {
+        echo '<div class="cat-tag-con small-txt">';
+            echo '<span class="categories">Kategorier: </span>' . get_the_category_list( ', ' ) . '<br />';
+            the_tags( '<span class="tags">Tags: </span>', ', ' );
+        echo '</div>';
+    }
+}
 // Search Results
 
 function simpleTheme_search_results() {

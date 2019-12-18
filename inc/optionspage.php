@@ -1,5 +1,36 @@
 <?php
 
+function simple_shortcode_info(){
+  echo '<h3>Post:</h3>';
+  echo '<ul>';
+  echo '<li><strong>Viser hele post</strong>';
+    echo '<ol>';
+      echo '<li><code>[postloop]</code></li>';
+      echo '<li><code>[postloop grid=g3]</code> - default = g4</li>';
+      echo '<li><code>[postloop cat=34]</code></li>';
+      echo '<li><code>[postloop number=4]</code> - default = alle</li>';
+    echo '</ol>';
+    echo '</li>';
+  echo '<li><strong>Viser elementer af post</strong>';
+    echo '<ol>';
+      echo '<li><code>[postloop_small]</code></li>';
+      echo '<li><code>[postloop_small grid=g2]</code> - default = g4</li>';
+      echo '<li><code>[postloop_small cat=54,38]</code></li>';
+      echo '<li><code>[postloop_small number=8]</code> - default = alle</li>';
+    echo '</ol>';
+    echo '</li>';
+   echo '<li><strong>Viser relaterede post</strong>';
+    echo '<ol>';
+      echo '<li><code>[postloop_related]</code></li>';
+      echo '<li><code>[postloop_related grid=g2]</code> - default = g1</li>';
+      echo '<li><code>[postloop_related cat=54,38]</code></li>';
+      echo '<li><code>[postloop_related number=5]</code> - default = alle</li>';
+      echo '<li><code>[postloop_related excerpt=no]</code> - default = yes</li>';
+    echo '</ol>';
+    echo '</li>';
+  echo '</ul>';
+}
+
 function simple_settings() {
     add_settings_section("section", "ThemeOptions", null, "simple");
 
@@ -88,8 +119,13 @@ function simple_page() {
             ?>
          </form>
       </div>
+
+
    <?php
+   simple_shortcode_info();
 }
+
+
 
 // Menu in WP
 function menu_item() {

@@ -49,26 +49,30 @@ function simple_hide_category_count() {
 
 
 // Cart
-function simpleTheme_small_cart() {
-
-echo '<a class="cart-customlocation" href="' . wc_get_cart_url() . '" title="' .  __( 'View your shopping cart' ) . '">' . sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
+if ( ! function_exists ( 'simpleTheme_small_cart' ) ) {
+	function simpleTheme_small_cart() {
+		echo '<a class="cart-customlocation" href="' . wc_get_cart_url() . '" title="' .  __( 'View your shopping cart' ) . '">' . sprintf ( _n( '(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) . ' - ' . WC()->cart->get_cart_total() . '</a>';
+	}
 }
 
 /**
  * Show cart contents / total Ajax
  */
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-	global $woocommerce;
+if ( ! function_exists ( 'woocommerce_header_add_to_cart_fragment' ) ) {
+	add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
 
-	ob_start();
+	function woocommerce_header_add_to_cart_fragment( $fragments ) {
+		global $woocommerce;
 
-	?>
-	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'simpletheme'); ?>"><?php echo sprintf(_n('(%d)', '(%d)', $woocommerce->cart->cart_contents_count, 'simpletheme'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-	<?php
-	$fragments['a.cart-customlocation'] = ob_get_clean();
-	return $fragments;
+		ob_start();
+
+		?>
+		<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'simpletheme'); ?>"><?php echo sprintf(_n('(%d)', '(%d)', $woocommerce->cart->cart_contents_count, 'simpletheme'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
+		<?php
+		$fragments['a.cart-customlocation'] = ob_get_clean();
+		return $fragments;
+	}
 }
 
 

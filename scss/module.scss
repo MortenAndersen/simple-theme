@@ -137,6 +137,19 @@ figure {
 
     img {
         width: 100%;
+        margin: .5em 0 0 0;
+    }
+
+    .sticky {
+        p {
+            margin: 0;
+        }
+
+        margin-bottom: 1em;
+    }
+
+    .flex-item {
+        border-bottom: 1px solid #e1e1e1;
     }
 }
 
@@ -187,6 +200,7 @@ figure {
             text-decoration: underline;
         }
     }
+
     aside & {
         h4 {
             margin: .5em 0 0 0;
@@ -201,32 +215,46 @@ figure {
         float: left;
     }
 }
+
 .samarbejde-shortcode {
     margin: 1em 0;
 }
+
 .samarbejdspartner {
     background: #fff;
     padding: 1em;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
 .samarbejde-shortcode img {
     float: left;
     width: 100%;
 }
+
 .samarbejde-shortcode a {
     display: block;
     text-decoration: none;
 
 }
+
 .no-logo {
     text-align: center;
 }
+
 .image-zoom {
     overflow: hidden;
 }
+
 .image-zoom img {
     transition: 1s all;
 }
+
 .image-zoom:hover img {
     transform: scale(1.05);
+}
+
+.cat-tag-con {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e1e1e1;
 }

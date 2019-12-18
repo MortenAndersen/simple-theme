@@ -7,13 +7,13 @@ function simpleTheme_postloop($atts) {
   ob_start();
 
   // define attributes and their defaults
-  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g4' ), $atts));
+  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g4', 'number' => -1 ), $atts));
   $post_id_array = explode(',', $cat);
 
  $loop = new WP_Query( array(
   'post_type' => 'post',
   'category__in' => $post_id_array,
-  'posts_per_page' => -1,
+  'posts_per_page' => $number,
  ) );
 
 
@@ -21,7 +21,14 @@ function simpleTheme_postloop($atts) {
    echo '<div class="box-shortcode post-shortcode flex-con ' . $grid . '">';
    while ( $loop->have_posts() ) : $loop->the_post();
 
+    // Farver
+    if( function_exists('acf_add_local_field_group') && get_field('baggrundsfarve') && get_field('tekstfarve') ):
+      echo '<article class="flex-item" style="padding: 2em; background: ' . get_field('baggrundsfarve') . '; color:' . get_field('tekstfarve') . ';">';
+    else:
+    // Farver SLUT
+
    echo '<article class="flex-item">';
+   endif;
    the_title('<h2>', '</h2>');
   the_content();
   edit_post_link( __( 'Edit', 'simpletheme' ), '<p>', '</p>', null, 'edit-post' );
@@ -42,13 +49,13 @@ function simpleTheme_postloop_small($atts) {
   ob_start();
 
   // define attributes and their defaults
-  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g4' ), $atts));
+  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g4', 'number' => -1 ), $atts));
   $post_id_array = explode(',', $cat);
 
  $loop = new WP_Query( array(
   'post_type' => 'post',
   'category__in' => $post_id_array,
-  'posts_per_page' => -1,
+  'posts_per_page' => $number,
  ) );
 
 
@@ -84,7 +91,7 @@ function simpleTheme_postloop_related($atts) {
   ob_start();
 
   // define attributes and their defaults
-  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g1', 'number' => 3 ), $atts));
+  extract(shortcode_atts(array('cat' => '1', 'grid' => 'g1', 'number' => 3, 'excerpt' => 'yes' ), $atts));
   $post_id_array = explode(',', $cat);
 
  $loop = new WP_Query( array(
@@ -111,7 +118,9 @@ function simpleTheme_postloop_related($atts) {
     echo '</a>';
 
     simpleTheme_date();
+    if ( $excerpt !== 'no') {
     the_excerpt();
+  }
     echo '<div class="more-link-con"><a href="' . get_permalink() . '" class="more-link">' . __( 'Læs mere', 'simpletheme') . '</a></div>';
    echo '</div>';
  endwhile; wp_reset_query();
