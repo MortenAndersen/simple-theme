@@ -34,7 +34,8 @@
 <?php dynamic_sidebar( 'sidebar-mobilemenu-shop-widget' ); ?>
 </div>
 <div class="mobile-info ipad-and-below">
-<?php dynamic_sidebar( 'sidebar-infobar' ); ?>
+<?php // dynamic_sidebar( 'sidebar-infobar' ); ?>
+<?php get_template_part( 'searchform-mobile' ); ?>
 <?php dynamic_sidebar( 'sidebar-mobilemenu-widget' ); ?>
 </div>
 

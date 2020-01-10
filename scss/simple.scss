@@ -8,7 +8,7 @@
 
 .background-2 {
     background: #243887;
-    background-image: linear-gradient(#083a59, #184368)
+    background-image: linear-gradient(#083a59, #184368);
 }
 
 .background-3 {
@@ -46,6 +46,7 @@ html {
 @media (max-width: 700px) {
     .widget {
         margin-bottom: 2em;
+
         &.frontpage-grid-widget {
             margin-bottom: 1em;
         }
@@ -54,13 +55,15 @@ html {
     .widget:last-of-type {
         margin-bottom: 0;
     }
+
     footer {
         .widget {
             border-bottom: 1px solid #c9c9c9;
             padding-bottom: 1em;
+
             &:last-of-type {
                 padding-bottom: 0;
-                border:none;
+                border: none;
             }
         }
     }
@@ -71,11 +74,12 @@ html {
 .mobile-info {
     margin: 2em 0;
     padding: .25em 1em 1.2em 1em;
-    border: 1px solid rgba(255,255,255,.07);
+    border: 1px solid rgba(255, 255, 255, .07);
     background-image: linear-gradient(rgba(255, 255, 255, .06), rgba(255, 255, 255, .02));
     color: #fff;
     border-radius: 3px;
     overflow: hidden;
+
     p {
         margin: 0;
     }
@@ -89,6 +93,7 @@ html {
             padding-bottom: 0;
         }
     }
+
     #search-2 {
         .widget-title {
             display: none;
@@ -105,13 +110,17 @@ html {
 .important-con {
     width: 100%;
     float: left;
+
     p {
         margin: 0;
     }
-    ul, ol {
+
+    ul,
+    ol {
         margin: 0;
         padding: 0;
     }
+
     li {
         margin: 0;
         padding: 0;
@@ -141,54 +150,58 @@ footer {
 
 .width-top {
     overflow: hidden;
-    .animate {
-    }
-    .menu {
-    margin: 0;
-    padding: 2em;
-    display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      justify-content: space-between;
- }
- .menu li {
-    margin: .5em 0;
-    padding: 0;
-    list-style-type: none;
-    flex: 1 100%;
-    max-width: 100%;
- }
 
- .menu a {
-    color: inherit;
-    display: block;
-    padding: 1em 0;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,.5);
-    box-shadow: 0 0 5px #fff;
-    transition: .5s all;
-    border-radius: 3px;
-    overflow: hidden;
-    text-decoration: none;
-    color: #fff;
- }
-  .menu a:hover {
-    background: rgba(255,255,255,.2);
-    box-shadow: none;
-  }
-  @media (min-width: 800px){
     .menu {
-        margin: 0 -.5em;
+        margin: 0;
+        padding: 2em;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
-         .menu li {
+
+    .menu li {
+        margin: .5em 0;
+        padding: 0;
+        list-style-type: none;
+        flex: 1 100%;
+        max-width: 100%;
+    }
+
+    .menu a {
+        color: inherit;
+        display: block;
+        padding: 1em 0;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, .5);
+        box-shadow: 0 0 5px #fff;
+        transition: .5s all;
+        border-radius: 3px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .menu a:hover {
+        background: rgba(255, 255, 255, .2);
+        box-shadow: none;
+    }
+
+    @media (min-width: 800px) {
+        .menu {
+            margin: 0 -.5em;
+        }
+
+        .menu li {
             flex: 1 auto;
             margin: 0;
- }
- .menu a {
-        margin: 0 .5em;
- }
-}
+        }
+
+        .menu a {
+            margin: 0 .5em;
+        }
+    }
 }
 
 .width-bottom {
@@ -225,10 +238,11 @@ footer {
     .simple-grid-item-main {
         flex: 1 70%;
         max-width: 70%;
+
         .page-template-page-contact &,
         .page-template-page-contact-two & {
             flex: 1 55%;
-        max-width: 55%;
+            max-width: 55%;
         }
     }
 
@@ -239,17 +253,18 @@ footer {
 
     .simple-grid-item-aside {
         flex: 1 25%;
-        max-width: 25%;
+        max-width: calc(30% - 2em);
+
         .page-template-page-contact &,
         .page-template-page-contact-two & {
             flex: 1 40%;
-        max-width: 40%;
+            max-width: 40%;
         }
     }
 
     .simple-grid-item-aside-small {
         flex: 1 20%;
-        max-width: 20%;
+        max-width: calc(25% - 2em);
     }
 
     .space-between {
@@ -268,8 +283,6 @@ footer {
         order: 3;
     }
 }
-
-
 
 .not-phone {
     display: none;
@@ -294,5 +307,11 @@ footer {
 
     .beyond-ipad {
         display: block;
+    }
+    .simple-grid-item-aside {
+        max-width: calc(30% - 3em);
+    }
+    .simple-grid-item-aside-small {
+        max-width: calc(25% - 3em);
     }
 }
