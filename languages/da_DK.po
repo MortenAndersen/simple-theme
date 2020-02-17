@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SimpleTheme\n"
-"POT-Creation-Date: 2019-01-14 12:33+0100\n"
-"PO-Revision-Date: 2019-01-14 13:04+0100\n"
+"POT-Creation-Date: 2020-01-22 11:25+0100\n"
+"PO-Revision-Date: 2020-01-22 11:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: da_DK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -40,32 +40,71 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
+#: functions.php:58
+msgid "Top Menu"
+msgstr ""
+
 #: functions.php:59
 msgid "Main Menu"
 msgstr ""
 
+#: functions.php:60
+#, fuzzy
+#| msgid "Footer"
+msgid "Footer Menu"
+msgstr "Sidefod"
+
+#: header.php:12
+msgid "Skip to content"
+msgstr "Gå til indhold"
+
 #: inc/custom-header.php:21
 msgid "Default Header Image"
+msgstr ""
+
+#: inc/guttenberg-functions.php:5
+msgid "strong magenta"
+msgstr ""
+
+#: inc/guttenberg-functions.php:10
+msgid "light grayish magenta"
+msgstr ""
+
+#: inc/guttenberg-functions.php:15
+msgid "very light gray"
+msgstr ""
+
+#: inc/guttenberg-functions.php:20
+msgid "very dark gray"
 msgstr ""
 
 #: inc/page-metabox.php:33
 msgid "Page options"
 msgstr ""
 
-#: inc/template-functions.php:158
+#: inc/post-shortcode.php:34 inc/post-shortcode.php:75
+msgid "Edit"
+msgstr "Ret"
+
+#: inc/post-shortcode.php:124
+msgid "Læs mere"
+msgstr ""
+
+#: inc/post-type.php:15
+msgid "Personer"
+msgstr ""
+
+#: inc/post-type.php:16
+msgid "Peron"
+msgstr ""
+
+#: inc/post-type.php:39 inc/post-type.php:40
+msgid "Samarbejde"
+msgstr ""
+
+#: inc/template-functions.php:356
 msgid "Go back"
 msgstr "Tilbage"
-
-#: inc/template-functions.php:181 inc/woo-functions.php:56
-msgid "View your shopping cart"
-msgstr "Se kurv"
-
-#: inc/template-functions.php:181 inc/woo-functions.php:56
-#, php-format
-msgid "%d produkt"
-msgid_plural "%d produkter"
-msgstr[0] ""
-msgstr[1] ""
 
 #: inc/widget.php:7
 msgid "Infobar"
@@ -85,8 +124,9 @@ msgid "Add widgets here to appear in your Top Container."
 msgstr ""
 
 #: inc/widget.php:29
+#, fuzzy
 msgid "Pre footer"
-msgstr ""
+msgstr "Sidefod"
 
 #: inc/widget.php:31
 msgid "Add widgets here to appear in your Pre Footer."
@@ -94,7 +134,7 @@ msgstr ""
 
 #: inc/widget.php:40
 msgid "Footer"
-msgstr ""
+msgstr "Sidefod"
 
 #: inc/widget.php:42
 msgid "Add widgets here to appear in your footer."
@@ -102,7 +142,7 @@ msgstr ""
 
 #: inc/widget.php:51
 msgid "Important"
-msgstr ""
+msgstr "Vigtigt"
 
 #: inc/widget.php:53
 msgid "Add widgets here to appear in your Important area."
@@ -110,61 +150,91 @@ msgstr ""
 
 #: inc/widget.php:62
 msgid "Aside left (page)"
-msgstr ""
+msgstr "Til side til venstre (side)"
 
 #: inc/widget.php:64
 msgid "Add widgets here to appear in your left aside on pages."
 msgstr ""
 
 #: inc/widget.php:73
+#, fuzzy
 msgid "Aside right (page)"
-msgstr ""
+msgstr "Højre"
 
 #: inc/widget.php:75
 msgid "Add widgets here to appear in your right aside on pages."
 msgstr ""
 
 #: inc/widget.php:84
+#, fuzzy
 msgid "Aside left (single)"
-msgstr ""
+msgstr "Venstre"
 
 #: inc/widget.php:86
 msgid "Add widgets here to appear in your left aside on posts."
 msgstr ""
 
 #: inc/widget.php:95
+#, fuzzy
 msgid "Aside right (single)"
-msgstr ""
+msgstr "Højre"
 
 #: inc/widget.php:97
 msgid "Add widgets here to appear in your right aside on posts."
 msgstr ""
 
 #: inc/widget.php:106
-msgid "Mobilemenu widget"
+msgid "Frontpage grid (only frontpage)"
 msgstr ""
 
 #: inc/widget.php:108
+msgid "Add widgets here to appear in a grid on the frontpage."
+msgstr ""
+
+#: inc/widget.php:117
+msgid "Mobilemenu widget"
+msgstr ""
+
+#: inc/widget.php:119
 msgid ""
 "Add widgets here to appear ONLY in your mobile-menu-container. (not the "
 "menu!)"
 msgstr ""
 
-#: inc/widget.php:117
-msgid "Top container bounceInUp"
-msgstr ""
-
-#: inc/widget.php:119
-msgid "Add widgets here to appear in your Animate bounceInUp Top Container."
-msgstr ""
-
 #: inc/widget.php:128
-msgid "Aside left (woo cat)"
+msgid "Mobilemenu shop widget"
 msgstr ""
 
 #: inc/widget.php:130
+msgid "Add widgets here to appear ONLY in your mobile-menu-shop-container."
+msgstr ""
+
+#: inc/widget.php:139
+msgid "Top container banner"
+msgstr ""
+
+#: inc/widget.php:141
+msgid "Add gallery here to appear in your banner."
+msgstr ""
+
+#: inc/widget.php:150
+msgid "Aside left (woo cat)"
+msgstr ""
+
+#: inc/widget.php:152
 msgid "Add widgets here to appear in your left aside on Woo Cat."
 msgstr ""
+
+#: inc/woo-functions.php:54 inc/woo-functions.php:71
+msgid "View your shopping cart"
+msgstr "Se kurv"
+
+#: inc/woo-functions.php:54 inc/woo-functions.php:71
+#, php-format
+msgid "(%d)"
+msgid_plural "(%d)"
+msgstr[0] ""
+msgstr[1] ""
 
 #: search.php:7
 #, php-format
@@ -174,6 +244,24 @@ msgstr "Søgeresultater for: %s"
 #: search.php:9
 msgid "Nothing Found"
 msgstr "Intet fundet"
+
+#: searchform-mobile.php:2 searchform-mobile.php:6 searchform.php:2
+#: searchform.php:6
+#, fuzzy
+#| msgid "Search Results for: %s"
+msgctxt "label"
+msgid "Search for:"
+msgstr "Søgeresultater for: %s"
+
+#: searchform-mobile.php:4 searchform.php:4
+msgctxt "placeholder"
+msgid "Search …"
+msgstr "Søg …"
+
+#: searchform-mobile.php:9 searchform.php:9
+msgctxt "submit button"
+msgid "Search"
+msgstr "Søg"
 
 #. Theme Name of the plugin/theme
 msgid "SimpleTheme"
@@ -196,13 +284,21 @@ msgid "https://www.hjemmesider.dk/morten-andersen"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "Contact Page 1"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "Aside left and right"
+msgstr "Sidebar i venstre og højre"
+
+#. Template Name of the plugin/theme
+msgid "Contact Page 2"
 msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Aside right"
-msgstr ""
+msgstr "Sidebar i højre"
 
 #. Template Name of the plugin/theme
 msgid "Aside left"
-msgstr ""
+msgstr "Sidebar i venstre"

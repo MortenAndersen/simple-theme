@@ -60,7 +60,7 @@ html {
         .widget {
             border-bottom: 1px solid #c9c9c9;
             padding-bottom: 1em;
-
+            overflow: hidden;
             &:last-of-type {
                 padding-bottom: 0;
                 border: none;

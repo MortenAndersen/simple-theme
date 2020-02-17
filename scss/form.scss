@@ -3,6 +3,7 @@ textarea {
     outline: none;
     padding: .5em;
     border: 1px solid #d7d7d7;
+
     aside & {
         height: 100px;
     }
@@ -91,29 +92,25 @@ form {
         width: 100%;
     }
 
-    .m-info--bar & {
-        min-width: 250px;
+    header & {
+        width: 250px;
+        overflow: hidden;
 
         input {
-            line-height: inherit;
-            background: rgba(255, 255, 255, .5);
             border: none;
-            width: 70%;
             float: left;
             padding: 0 .4em 0 .4em;
-
+            height: 2em;
             &[type=search] {
-                border-radius: 2px 0 0 2px;
                 background: rgba(255, 255, 255, .5);
                 border-radius: 3px 0 0 3px;
-
+                background: rgba(255, 255, 255, .5);
+                width: 70%;
                 &:focus {
                     background: #fff;
                 }
             }
-
             &[type=submit] {
-                border-radius: 0 2px 2px 0;
                 background: rgba(255, 255, 255, .8);
                 border-radius: 0 3px 3px 0;
                 width: 30%;
@@ -121,7 +118,6 @@ form {
                 padding-left: 0;
                 padding-right: 0;
                 cursor: pointer;
-
                 &:focus,
                 &:hover {
                     background: rgba(255, 255, 255, .9);

@@ -8,6 +8,29 @@
             $(this).toggleClass('open');
             $('.js-nav-toggle').toggleClass('open-mobile-menu');
             $('body').toggleClass('mobile-menu-open');
+
+            // Aria
+
+            if ($('#nav-icon').attr( 'aria-expanded') === 'true') {
+                $(this).attr( 'aria-expanded', 'false');
+            } else {
+                $(this).attr( 'aria-expanded', 'true');
+            }
+
+            if ($('#nav-icon').attr( 'aria-pressed') === 'true') {
+                $(this).attr( 'aria-pressed', 'false');
+            } else {
+                $(this).attr( 'aria-pressed', 'true');
+            }
+
+            if ($('#nav-icon').attr( 'aria-label') === 'Åben menu') {
+                $(this).attr( 'aria-label', 'Luk menu');
+            } else {
+                $(this).attr( 'aria-label', 'Åben menu');
+            }
+
+            // Aria slut
+
         });
 
         // MOBILE MENU //
@@ -19,12 +42,22 @@
         });
 
         // Sub menu trigger
-        $('.all-menu ul').parent('li').append('<span class="menu-trigger"></span>');
+        $('.all-menu ul').parent('li').append('<span class="menu-trigger" aria-label="Åben undermenu"></span>');
 
         // Sub menu toggle
         $('.menu-trigger').click(function() {
             $(this).siblings('ul').slideToggle().toggleClass('mobile-sibling-open');
             $(this).toggleClass('active-trigger');
+
+            // Aria
+
+            if ($(this).attr( 'aria-label') === 'Åben undermenu') {
+                $(this).attr( 'aria-label', 'Luk undermenu');
+            } else {
+                $(this).attr( 'aria-label', 'Åben undermenu');
+            }
+
+
         });
 
         // WordPress mobile-menu

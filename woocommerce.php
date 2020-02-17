@@ -5,7 +5,7 @@
 	    <div class="main woo-main simple-grid-item-main order-2">
 	      <?php woocommerce_content(); ?>
 	    </div>
-	    <aside class="aside-left simple-grid-item-aside order-1 beyond-ipad">
+	    <aside class="aside-left simple-grid-item-aside order-1 no-phone">
 	    	<?php get_template_part( 'template/sidebar/aside-left-woo-cat' ); ?>
 	    </aside>
 	  </div>

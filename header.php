@@ -24,6 +24,7 @@
 <?php get_template_part( 'template/sidebar/info-bar' ); ?>
 <?php get_template_part( 'template/header/site-title' ); ?>
 </header>
+<?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'mainmenu' ); ?>
 <?php get_template_part( 'template/sidebar/top-container' ); ?>
 
@@ -35,6 +36,7 @@
 	<div class="header-logo-menu">
 <div class="l-wrap logo__menu">
 <?php get_template_part( 'template/header/site-title' ); ?>
+<?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'mainmenu' ); ?>
 </div>
 </div>

@@ -2,7 +2,6 @@
 <?php // simpleTheme_blog_loop(); ?>
 <?php get_template_part( 'sidebar' ); ?>
 <?php simpleTheme_copyright(); ?>
-<?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php wp_footer(); ?>
 <?php simpleTheme_html_body_footer(); ?>
 </body>
