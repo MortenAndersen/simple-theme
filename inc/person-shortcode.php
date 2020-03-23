@@ -23,7 +23,7 @@ function simpleTheme_personer($atts) {
  if ( $loop->have_posts() ) {
  	echo '<div class="personer-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
- 	echo '<div class="flex-item">';
+ 	echo '<div id="post-id-' .get_the_ID(). '" class="flex-item">';
  		if ( has_post_thumbnail() ) {
         echo '<div class="shortcode-person-img">';
         the_post_thumbnail( 'simpletheme-content-image' );
@@ -61,7 +61,7 @@ function simpleTheme_personerLink($atts) {
  if ( $loop->have_posts() ) {
  	  echo '<div class="personer-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
- 	echo '<div class="flex-item">';
+ 	echo '<div id="post-id-' .get_the_ID(). '" class="flex-item">';
  		if ( has_post_thumbnail() ) {
         echo '<div class="shortcode-person-img">';
         echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
@@ -71,7 +71,11 @@ function simpleTheme_personerLink($atts) {
       }
       the_title('<h4>', '</h4>');
  		simpleTheme_acf_person();
- 		echo '<p class="read-more-person"><a class="read-more" href="' . get_the_permalink() . '">Læs mere om <span class="read-more-name">' . get_the_title() . '</span></a></p>';
+
+    $content = get_the_content();
+    if(!empty($content)) {
+ 		 echo '<p class="read-more-person"><a class="read-more" href="' . get_the_permalink() . '">Læs mere om <span class="read-more-name">' . get_the_title() . '</span></a></p>';
+    }
  	 echo '</div>';
  endwhile; wp_reset_query();
  echo '</div>';
