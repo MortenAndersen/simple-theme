@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
+<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'simpletheme' ); ?></a>
 
 
 
