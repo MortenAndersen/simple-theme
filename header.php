@@ -42,6 +42,6 @@
 </div>
 </header>
 <?php get_template_part( 'template/sidebar/top-container' ); ?>
-<?php			break;
+<?php break;
 	}
 ?>

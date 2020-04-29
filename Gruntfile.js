@@ -31,7 +31,7 @@ module.exports = function (grunt) {
      uglify: {
     my_target: {
       files: {
-        'assets/js/theme.js': ['assets/js/bx-slider.js', 'assets/js/lightbox.js', 'assets/js/simple.js']
+        'assets/js/theme.js': ['assets/js/fitvids.js', 'assets/js/bx-slider.js', 'assets/js/lightbox.js', 'assets/js/simple.js']
       }
     }
   },

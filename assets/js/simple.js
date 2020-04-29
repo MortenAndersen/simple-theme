@@ -86,6 +86,8 @@
             controls: false
         });
 
+        // Video
+        $(".video").fitVids();
 
         // Show and Hide
         $('.show-hide-content').hide();
