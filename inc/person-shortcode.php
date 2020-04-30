@@ -87,8 +87,8 @@ function simpleTheme_personerLink($atts) {
 
 /* ____________________________________________________________________ */
 
-add_shortcode('personer_pp', 'simpleTheme_personer_pp');
-function simpleTheme_personer_pp($atts) {
+add_shortcode('personer_list', 'simpleTheme_personer_list');
+function simpleTheme_personer_list($atts) {
   global $post;
   ob_start();
 

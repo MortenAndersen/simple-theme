@@ -29,6 +29,16 @@ function simple_shortcode_info(){
     echo '</ol>';
     echo '</li>';
   echo '</ul>';
+   echo '<h3>Personer:</h3>';
+  echo '<ul>';
+  echo '<li><code>[personer]</code> - samme gridopbygning som ved posts</li>';
+  echo '<li><code>[personer_link]</code> - link til personens side <u>hvis</u> bodyfeltet er i brug</li>';
+  echo '<li><code>[personer_list postid=7,88,2 grid=g3]</code> - Viser <u>kun</u> personerne hvor postid er 7,88,2 i nævnte rækkefølge ... og her i et grid med 3 spalter</li>';
+  echo '</ul>';
+  echo '<h3>Sider:</h3>';
+  echo '<ul>';
+  echo '<li><code>[box postid=1,2,3,5 grid=g4]</code> - Viser siderne med id 1,2,3 og 5 i et grid opdelt i 4</li>';
+  echo '</ul>';
 }
 
 function simple_settings() {

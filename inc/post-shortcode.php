@@ -70,8 +70,11 @@ function simpleTheme_postloop_small($atts) {
         echo '</div>';
       }
     the_title('<h4>', '</h4>');
-    the_excerpt();
+
     echo '</a>';
+    the_excerpt();
+  echo '<div class="more-link-con"><a href="' . get_permalink() . '" class="more-link">' . __( 'Læs mere', 'simpletheme') . '</a></div>';
+
     edit_post_link( __( 'Edit', 'simpletheme' ), '<p>', '</p>', null, 'edit-post' );
 
    echo '</div>';
