@@ -11,7 +11,7 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php
 				echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
-					the_title( '<h2>', '</h2>');
+					the_title( '<h4 class="post-loop-title">', '</h4>');
 					if ( has_post_thumbnail() ) {
 						echo '<div class="box-img">';
 						the_post_thumbnail( 'small');

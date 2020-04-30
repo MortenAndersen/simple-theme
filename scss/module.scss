@@ -137,7 +137,6 @@ figure {
 
     img {
         width: 100%;
-        margin: .5em 0 0 0;
     }
 
     .sticky {
@@ -262,4 +261,8 @@ figure {
 }
 .simple-archive {
     margin-top: 1em;
+}
+.box-shortcode,
+.post-shortcode {
+    margin: 2em 0;
 }

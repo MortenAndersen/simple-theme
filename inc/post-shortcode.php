@@ -29,7 +29,7 @@ function simpleTheme_postloop($atts) {
 
    echo '<article class="flex-item">';
    endif;
-   the_title('<h2>', '</h2>');
+   the_title('<h2 class="post-loop-title">', '</h2>');
   the_content();
   edit_post_link( __( 'Edit', 'simpletheme' ), '<p>', '</p>', null, 'edit-post' );
   echo '</article>';
@@ -64,12 +64,12 @@ function simpleTheme_postloop_small($atts) {
  while ( $loop->have_posts() ) : $loop->the_post();
   echo '<div class="flex-item">';
   echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
+    the_title('<h4 class="post-loop-title">', '</h4>');
     if ( has_post_thumbnail() ) {
         echo '<div class="box-img">';
         the_post_thumbnail( 'simpletheme-content-image' );
         echo '</div>';
       }
-    the_title('<h4>', '</h4>');
 
     echo '</a>';
     the_excerpt();
@@ -109,6 +109,9 @@ function simpleTheme_postloop_related($atts) {
   echo '<div class="box-shortcode post-shortcode flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
   echo '<div class="flex-item">';
+    echo '<a href="' . get_the_permalink() . '">';
+      the_title('<h4 class="post-loop-title">', '</h4>');
+    echo '</a>';
     if ( has_post_thumbnail() ) {
       echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
         echo '<div class="box-img">';
@@ -116,9 +119,7 @@ function simpleTheme_postloop_related($atts) {
         echo '</div>';
       echo '</a>';
       }
-    echo '<a href="' . get_the_permalink() . '">';
-    the_title('<h4>', '</h4>');
-    echo '</a>';
+
 
     simpleTheme_date();
     if ( $excerpt !== 'no') {
