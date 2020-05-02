@@ -253,16 +253,32 @@ figure {
     padding-bottom: 1em;
     border-bottom: 1px solid #e1e1e1;
 }
+
 #respond {
     overflow: hidden;
 }
+
 .content-img {
     margin-bottom: 1em;
 }
+
 .simple-archive {
     margin-top: 1em;
 }
+
 .box-shortcode,
 .post-shortcode {
     margin: 2em 0;
+}
+
+.logo-text-con {
+    display: flex;
+    flex-flow: column;
+}
+
+@media (min-width: 700px) {
+    .logo-text-con {
+        flex-flow: row;
+        align-items: center;
+    }
 }

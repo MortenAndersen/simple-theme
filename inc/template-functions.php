@@ -3,6 +3,7 @@
 // Site header
 if ( ! function_exists ( 'simpleTheme_site_header' ) ) {
     function simpleTheme_site_header() {
+        echo '<div class="logo-text-con">';
         // Logo
         $custom_logo_id = get_theme_mod( 'custom_logo' );
         $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -24,6 +25,7 @@ if ( ! function_exists ( 'simpleTheme_site_header' ) ) {
             }
             echo '</div>';
         }
+        echo '</div>';
     }
 }
 
