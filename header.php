@@ -32,7 +32,7 @@
 		<?php	break;
 		case '3': ?>
 <?php get_template_part( 'template/sidebar/info-bar' ); ?>
-<header role="banner">
+<header role="banner" class="logo-menu-header">
 	<div class="header-logo-menu">
 <div class="l-wrap logo__menu">
 <?php get_template_part( 'template/header/site-title' ); ?>

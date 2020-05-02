@@ -199,7 +199,7 @@ img {
 
 .site-title {
     color: inherit;
-    font-size: 2em;
+    font-size: 1.4em;
     line-height: 1;
 
     a {
@@ -222,6 +222,7 @@ img {
     img {
         width: 100%;
         max-width: 220px;
+        float: left;
     }
 }
 
