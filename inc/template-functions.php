@@ -296,6 +296,7 @@ function simpleTheme_acf_gallery() {
 
 // ACF Person
 
+
 function simpleTheme_acf_person() {
     if( function_exists('acf_add_local_field_group') ):
         if( is_singular( 'person' ) && get_field('titel') || get_field('mobiltelefon') || get_field('telefon') || get_field('email') ) {
@@ -316,7 +317,7 @@ function simpleTheme_acf_person() {
                 if( get_field('email') ) {
                     echo '<li class="email icon">';
                     get_template_part( 'assets/images/icon/mail' );
-                    echo '<a href="mailto:' . get_field('email') . '">' . get_field('email') . '</a></li>';
+                    echo '<a href="mailto:' . get_field('email') . '">Email</a></li>';
                 }
                 if( get_field('linkedin') ) {
                     echo '<li class="phone icon">';
