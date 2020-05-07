@@ -150,6 +150,20 @@ figure {
     .flex-item {
         border-bottom: 1px solid #e1e1e1;
         margin-bottom: 2em;
+        article {
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            .more-link-con {
+                margin-bottom: 1em;
+                margin-top: auto;
+            }
+            &.sticky {
+                .more-link-con {
+                margin-bottom: 0;
+            }
+            }
+        }
     }
 }
 
