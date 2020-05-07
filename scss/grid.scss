@@ -191,16 +191,16 @@ $ipad: 800px;
     @media (min-width:$ipad) {
         .flex-con.g3 {
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 3em;
+            grid-gap: 2em;
         }
 
         .flex-con.g4 {
-            grid-gap: 3em;
+            grid-gap: 2em;
             grid-template-columns: repeat(4, 1fr);
         }
 
         .flex-con.g5 {
-            grid-gap: 2em;
+            grid-gap: 1em;
             grid-template-columns: repeat(5, 1fr);
         }
     }
