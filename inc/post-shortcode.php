@@ -18,7 +18,7 @@ function simpleTheme_postloop($atts) {
 
 
  if ( $loop->have_posts() ) {
-   echo '<div class="box-shortcode post-shortcode flex-con ' . $grid . '">';
+   echo '<div class="box-shortcode post-shortcode simple-archive flex-con ' . $grid . '">';
    while ( $loop->have_posts() ) : $loop->the_post();
 
     // Farver
@@ -60,7 +60,7 @@ function simpleTheme_postloop_small($atts) {
 
 
  if ( $loop->have_posts() ) {
-  echo '<div class="box-shortcode post-shortcode flex-con ' . $grid . '">';
+  echo '<div class="box-shortcode post-shortcode simple-archive flex-con ' . $grid . '">';
  while ( $loop->have_posts() ) : $loop->the_post();
   echo '<div class="flex-item">';
   echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
@@ -72,6 +72,7 @@ function simpleTheme_postloop_small($atts) {
       }
 
     echo '</a>';
+    simpleTheme_date();
     the_excerpt();
   echo '<div class="more-link-con"><a href="' . get_permalink() . '" class="more-link">' . __( 'Læs mere', 'simpletheme') . '</a></div>';
 
