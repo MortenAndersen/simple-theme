@@ -13,7 +13,7 @@ if( function_exists('acf_add_local_field_group') ):
 	    	array(
 	    		'labels' => array(
 	    			'name' => __('Personer', 'simpletheme'),
-	    			'singular_name' => __('Peron', 'simpletheme')
+	    			'singular_name' => __('Person', 'simpletheme')
 	    		),
 	    		'public' => true,
 	    		'menu_icon' => 'dashicons-businessman',
@@ -65,4 +65,9 @@ if( function_exists('acf_add_local_field_group') ):
 
 	register_activation_hook( __FILE__, 'simpleTheme_posttype_function' );
 
+
+
+
 endif;
+
+// End check for ACF

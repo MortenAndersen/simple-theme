@@ -220,20 +220,20 @@ figure {
 
 .box-img {
     overflow: hidden;
-
+    margin-bottom: 1em;
     img {
         float: left;
     }
-}
-
-.samarbejde-shortcode {
-    margin: 1em 0;
 }
 
 .samarbejdspartner {
     background: #fff;
     padding: 1em;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 .samarbejde-shortcode img {

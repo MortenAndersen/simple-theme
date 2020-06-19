@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
 				"marg",
 				"margin-top\tproperty"
 			],
@@ -82,10 +86,6 @@
 			[
 				"sel",
 				"align-self\tproperty"
-			],
-			[
-				"pa",
-				"padding-top\tproperty"
 			],
 			[
 				"p",
@@ -641,20 +641,22 @@
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/drupalmigrate/sites/default/settings.php",
+		"/Applications/MAMP/htdocs/wpplugin/wp-content/plugins/simple-news/readme.txt",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/font.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/simple.js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/grid.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/post-shortcode.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/post/archive-loop.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/template-functions.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/module.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/person-shortcode.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/font.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/logo-menu.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/layout.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/header.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/menu.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/important.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/optionspage.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/simple.js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/fitvids.js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/Gruntfile.js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/simple.scss",
@@ -766,9 +768,7 @@
 		"/Applications/MAMP/htdocs/simple/content/footer-content.php",
 		"/Applications/MAMP/htdocs/simple/content/nav-main-content.php",
 		"/Applications/MAMP/htdocs/simple/scss/helper.scss",
-		"/Applications/MAMP/htdocs/simple/content/module.scss",
-		"/Applications/MAMP/htdocs/simple/scss/style.scss",
-		"/Applications/MAMP/htdocs/simple/content/width-top.php"
+		"/Applications/MAMP/htdocs/simple/content/module.scss"
 	],
 	"find":
 	{
@@ -841,7 +841,7 @@
 				{
 					"buffer": 0,
 					"file": "assets/js/simple.js",
-					"semi_transient": false,
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 3013,
@@ -851,41 +851,23 @@
 						"selection":
 						[
 							[
-								2267,
-								2267
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"SL.64.region_keys":
-							[
-							],
 							"bracket_highlighter.busy": false,
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										2999,
-										3000
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										86,
-										87
-									]
 								},
 								"unmatched":
 								{
@@ -903,6 +885,11 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -913,21 +900,21 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -938,22 +925,17 @@
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 51.0,
+						"translation.x": 0.0,
 						"translation.y": 1039.0,
 						"zoom_level": 1.0
 					},

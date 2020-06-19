@@ -20,21 +20,23 @@
 		case '1':
 		case '2': ?>
 
-<header role="banner">
+<header role="banner" class="logo__menu-flex">
 <?php get_template_part( 'template/sidebar/info-bar' ); ?>
 <?php get_template_part( 'template/header/site-title' ); ?>
-</header>
+
+
 <?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'mainmenu' ); ?>
 <?php get_template_part( 'template/sidebar/top-container' ); ?>
-
+</header>
 
 		<?php	break;
 		case '3': ?>
-<?php get_template_part( 'template/sidebar/info-bar' ); ?>
+
 <header role="banner" class="logo-menu-header">
+	<?php get_template_part( 'template/sidebar/info-bar' ); ?>
 	<div class="header-logo-menu">
-<div class="l-wrap logo__menu">
+<div class="l-wrap logo__menu logo__menu-flex">
 <?php get_template_part( 'template/header/site-title' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'mainmenu' ); ?>

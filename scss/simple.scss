@@ -137,6 +137,9 @@ html {
         list-style-type: none;
     }
 }
+.logo-menu-header .background-info {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
 
 @media (min-width: 1025px) {
     .important-con {

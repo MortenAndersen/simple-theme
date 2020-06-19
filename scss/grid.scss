@@ -26,7 +26,7 @@ $ipad: 800px;
 
 @media (min-width: $phone) {
     .flex-item {
-        flex: 1;
+        flex: 1 100%;
     }
 
     // Grid

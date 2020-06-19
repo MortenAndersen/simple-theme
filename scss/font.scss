@@ -1,6 +1,9 @@
+body, html {
+    height: 100%;
+}
+
 body {
     font-family: 'Questrial', sans-serif;
-
     color: #2d2d2d;
     font-size: 1em;
     font-weight: 400;
@@ -67,7 +70,8 @@ h4+p {
 
 p {
     .textwidget &,
-    aside & {
+    aside &,
+    .simple-archive & {
         margin-top: 0;
     }
 }
@@ -106,7 +110,8 @@ aside div:first-child {
 .background-pre-footer .widget-title {
     text-align: center;
     border-bottom: 1px solid #cacaca;
-    margin-bottom: 2em;
+    margin-top: 0;
+    margin-bottom: 1em;
     padding-bottom: .3em;
     position: relative;
 
@@ -121,6 +126,12 @@ aside div:first-child {
         height: 1px;
     }
 
+}
+
+@media (min-width: 769px){
+    .background-pre-footer .widget-title {
+    margin-bottom: 2em;
+    }
 }
 
 .widget-title-important {
