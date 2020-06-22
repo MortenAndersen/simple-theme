@@ -105,6 +105,7 @@ require get_parent_theme_file_path( '/inc/optionspage.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-fields-gallery.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-personer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-kontakt.php' );
+require get_parent_theme_file_path( '/assets/acf/acf-ydelser.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-filer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-simple.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-samarbejde.php' );
