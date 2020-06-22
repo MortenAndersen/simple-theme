@@ -13,7 +13,12 @@ if ( ! function_exists ( 'simpleTheme_site_header' ) ) {
         }
 
         if ( 'blank' !== get_header_textcolor() ) {
+            if ( has_custom_logo() ) :
             echo '<div class="site-header-text">';
+        else :
+            echo '<div class="site-header-text none-logo">';
+        endif;
+
             // Title
             if ( get_bloginfo( 'name' )  !== '' ) {
                 echo '<div class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '">' . get_bloginfo( 'name' ) . '</a></div>';

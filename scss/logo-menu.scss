@@ -63,6 +63,9 @@
     }
     .header-logo-menu .site-header-text {
         margin-left: 1em;
+        &.none-logo {
+            margin-left: 0;
+        }
     }
     .header-logo-menu .background-2 {
         background: none;
