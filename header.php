@@ -27,8 +27,8 @@
 
 <?php get_template_part( 'template/navigation/nav', 'icon' ); ?>
 <?php get_template_part( 'template/navigation/nav', 'mainmenu' ); ?>
-<?php get_template_part( 'template/sidebar/top-container' ); ?>
 </header>
+<?php get_template_part( 'template/sidebar/top-container' ); ?>
 
 		<?php	break;
 		case '3': ?>
