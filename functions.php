@@ -90,6 +90,7 @@ require get_parent_theme_file_path( '/inc/post-type-ydelse.php' );
 
 // Shortcode
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
+require get_parent_theme_file_path( '/inc/ydelse-shortcode.php' );
 require get_parent_theme_file_path( '/inc/samarbejde-shortcode.php' );
 require get_parent_theme_file_path( '/inc/contactinfo-shortcode.php' );
 require get_parent_theme_file_path( '/inc/post-shortcode.php' );

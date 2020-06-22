@@ -73,7 +73,23 @@
             auto: true,
             autoHover: true,
             nextText: '',
-            prevText: ''
+            prevText: '',
+
+        });
+
+        $('.slider-carousel').bxSlider({
+            auto: true,
+            autoHover: true,
+            pager: false,
+            shrinkItems: true,
+            minSlides: 1,
+            maxSlides: 4,
+            slideWidth: 269,
+            slideMargin: 20,
+            moveSlides: 3,
+            mode: 'horizontal',
+            nextText: ' > ',
+            prevText: ' < ',
         });
 
 

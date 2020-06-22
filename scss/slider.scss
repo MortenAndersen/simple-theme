@@ -115,3 +115,42 @@ ul.slider {
 .bx-stop {
     margin-left: 5px;
 }
+
+.carousel {
+    margin: 2em 0;
+    border-top: 5px solid #f2f2f2;
+    border-bottom: 5px solid #f2f2f2;
+    padding: 20px 0 0 0;
+    .box-shortcode {
+        margin: 0;
+    }
+    p {
+    margin:  0;
+}
+    .bx-controls-direction {
+        position: relative;
+        text-align: right;
+        margin: 0;
+    }
+    .bx-next {
+        position: relative;
+    }
+    .bx-controls-direction a, .bx-controls-auto a {
+        background-image: none;
+        color: #a9a9a9;
+        &:hover {
+            color: #222;
+        }
+    }
+    .bx-prev {
+        display: none;
+    }
+    .bx-next {
+    border-radius: 50%;
+
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    line-height: 1em;
+    }
+}

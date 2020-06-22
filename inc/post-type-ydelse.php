@@ -1,4 +1,5 @@
 <?php
+if( function_exists('acf_add_local_field_group') ):
 // Posttype Ydelser
 
 add_action( 'init', 'simpleTheme_create_posttype_ydelser' );
@@ -95,3 +96,5 @@ function remove_pre_ydelse_orderby( $query ) {
         add_action( 'pre_get_posts', 'order_ydelse_type_categories', 11 );
     }
 }
+
+endif;
