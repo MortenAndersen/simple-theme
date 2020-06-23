@@ -38,7 +38,9 @@ get_header();
 //Get array of terms
 $terms = get_the_terms( $post->ID , 'ydelse-type', 'string' );
 //Pluck out the IDs to get an array of IDS
+if ( ! empty( $terms )) {
 $term_ids = wp_list_pluck( $terms,'term_id' );
+
 
 //Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
 //Chose 'AND' if you want to query for posts with all terms
@@ -51,11 +53,24 @@ $term_ids = wp_list_pluck( $terms,'term_id' );
                         'terms' => $term_ids,
                         'operator'=> 'IN' //Or 'AND' or 'NOT IN'
                      )),
+
       'posts_per_page' => 3,
       'ignore_sticky_posts' => 1,
       'orderby' => 'rand',
       'post__not_in'=>array( $post->ID )
    ) );
+
+} else {
+
+  $second_query = new WP_Query( array(
+      'post_type' => 'ydelse',
+      'posts_per_page' => 3,
+      'ignore_sticky_posts' => 1,
+      'orderby' => 'rand',
+      'post__not_in'=>array( $post->ID )
+   ) );
+
+}
 
 //Loop through posts and display...
     if( $second_query->have_posts() ) {

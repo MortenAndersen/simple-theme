@@ -98,3 +98,100 @@ function remove_pre_ydelse_orderby( $query ) {
 }
 
 endif;
+
+
+// Loop til page-ydleser.php - fordeling af de forskellige ydlerser
+if ( ! function_exists ( 'ydelser_type' ) ) {
+function ydelser_type() {
+
+    $post_type = 'ydelse';
+    $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
+
+    foreach( $taxonomies as $taxonomy ) :
+        $terms = get_terms( $taxonomy );
+        foreach( $terms as $term ) :
+
+          $args = array(
+            'post_type' => $post_type,
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'order' => 'asc',
+            'tax_query' => array(
+              array(
+                'taxonomy' => $taxonomy,
+                'field' => 'slug',
+                'terms' => $term->slug,
+              )
+            )
+          );
+
+          $posts = new WP_Query($args);
+
+            if( $posts->have_posts() ):
+                echo '<div class="ydelse-beskrivelse">';
+                    echo '<h3>' . $term->name . '</h3>';
+                    echo '<p>' . $term->description . '</p>';
+                echo '</div>';
+                echo '<div class="simple-archive flex-con g4">';
+                    while( $posts->have_posts() ) : $posts->the_post();
+                        echo '<div class="flex-item">';
+                            echo '<article id="post-' . get_the_ID() . '" class="' . $post_class = implode( ' ', get_post_class() ) . '"">';
+                                echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
+                                    the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    if ( has_post_thumbnail() ) {
+                                        echo '<div class="box-img">';
+                                        the_post_thumbnail( 'small');
+                                        echo '</div>';
+                                    }
+                                echo '</a>';
+                                the_excerpt();
+                                echo '<div class="more-link-con"><a href="' . get_permalink() . '" class="more-link">' . __( 'Læs mere', 'simpletheme') . '</a></div>';
+                            echo '</article>';
+                        echo '</div>';
+                    endwhile;
+                echo '</div>';
+            endif;
+
+        endforeach;
+    endforeach;
+    wp_reset_query();
+
+}
+}
+// Loop hvis vi ikke benytter kategorier (type)
+
+if ( ! function_exists ( 'ydelser_all' ) ) {
+function ydelser_all() {
+
+    $loop = new WP_Query( array(
+        'post_type' => 'ydelse',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'asc',
+    ) );
+    if ( $loop->have_posts() ) {
+        echo '<div class="simple-archive flex-con g4">';
+        while ( $loop->have_posts() ) : $loop->the_post();
+                echo '<div class="flex-item">';
+                            echo '<article id="post-' . get_the_ID() . '" class="' . $post_class = implode( ' ', get_post_class() ) . '"">';
+                                echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
+                                    the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    if ( has_post_thumbnail() ) {
+                                        echo '<div class="box-img">';
+                                        the_post_thumbnail( 'small');
+                                        echo '</div>';
+                                    }
+                                echo '</a>';
+                                the_excerpt();
+                                echo '<div class="more-link-con"><a href="' . get_permalink() . '" class="more-link">' . __( 'Læs mere', 'simpletheme') . '</a></div>';
+                            echo '</article>';
+                        echo '</div>';
+        endwhile;
+        echo '</div>';
+        wp_reset_query();
+
+ }
+
+
+}
+}
