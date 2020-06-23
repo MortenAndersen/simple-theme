@@ -29,7 +29,8 @@ input {
     &.search-submit,
     &[type=email],
     &[type=number],
-    &[type=url] {
+    &[type=url],
+    &[type=tel] {
         width: 100%;
         outline: none;
         -webkit-appearance: none;

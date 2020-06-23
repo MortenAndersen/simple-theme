@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"ord",
+				"orderby"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"co",
+				"color\tproperty"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
 				"pa",
 				"padding\tproperty"
 			],
@@ -20,16 +52,8 @@
 				"min-width"
 			],
 			[
-				"mar",
-				"margin-bottom\tproperty"
-			],
-			[
 				"text",
 				"text-decoration"
-			],
-			[
-				"co",
-				"columns\tproperty"
 			],
 			[
 				"fle",
@@ -42,10 +66,6 @@
 			[
 				"n",
 				"none"
-			],
-			[
-				"pad",
-				"padding-right\tproperty"
 			],
 			[
 				"i",
@@ -64,20 +84,12 @@
 				"inline-block"
 			],
 			[
-				"min",
-				"min-height"
-			],
-			[
 				"list",
 				"list-style-type\tproperty"
 			],
 			[
 				"h",
 				"hidden"
-			],
-			[
-				"tex",
-				"text-decoration"
 			],
 			[
 				"c",
@@ -126,10 +138,6 @@
 			[
 				"ech",
 				"echo"
-			],
-			[
-				"ma",
-				"margin"
 			],
 			[
 				"fun",
@@ -230,10 +238,6 @@
 			[
 				"rem",
 				"removeClass\t.removeClass()"
-			],
-			[
-				"margi",
-				"margin-left"
 			],
 			[
 				"max",
@@ -510,20 +514,16 @@
 			[
 				"ar",
 				"article\tTag"
-			],
-			[
-				"cou",
-				"cursor"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "assets/js/simple.js",
+			"file": "scss/animate-element.scss",
 			"settings":
 			{
-				"buffer_size": 3013,
+				"buffer_size": 214,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -641,40 +641,55 @@
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/simple.js",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/module.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/slider.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/post-type-ydelse.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-ydelser.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/functions.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/template-functions.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/logo-menu.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/header.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/ydelse-shortcode.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/person.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/form.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/single-ydelse.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/page-ydelser.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/grid.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/page/ydelse-loop.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/post-type.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/post/archive-loop-ydelse.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/font.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/layout.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/simple.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/menu.scss",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/single.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/taxonomy-ydelse-type.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/archive.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/taxonomy.php",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/single-ydelse-php.twig",
+		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/taxonomy-ydelse.php",
 		"/Applications/MAMP/htdocs/drupalmigrate/sites/default/settings.php",
 		"/Applications/MAMP/htdocs/wpplugin/wp-content/plugins/simple-news/readme.txt",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/font.scss",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/simple.js",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/grid.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/post-shortcode.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/post/archive-loop.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/template-functions.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/module.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/person-shortcode.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/logo-menu.scss",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/layout.scss",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/header.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/menu.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/important.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/optionspage.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/js/fitvids.js",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/Gruntfile.js",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/simple.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/css/ie.css",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/languages/da_DK.po",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/woocommerce.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/navigation/nav-mainmenu.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/form.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/header/site-title.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/footer.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/navigation/nav-icon.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/style.scss",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/functions.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/searchform-mobile.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/searchform.php",
 		"/Users/morten/Downloads/export-PRODUCTS-b98864c9-a51e-4692-b353-29516a1739c6.xml",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-color.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/archive.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/index.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/page/page-loop.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/woo-functions.php",
@@ -682,7 +697,6 @@
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/page-contact.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-simple.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-kontakt.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/person.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/box.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/samarbejde-shortcode.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/top-container.php",
@@ -692,7 +706,6 @@
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/icon.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/contactinfo-shortcode.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-samarbejde.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/inc/post-type.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/frontpage-grid.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/scss/woo.scss",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/assets/acf/acf-filer.php",
@@ -713,7 +726,6 @@
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/page.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/page-right-aside.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/page-left-right-aside.php",
-		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/single.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/sidebar.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/sidebar/aside-left-woo-cat.php",
 		"/Applications/MAMP/htdocs/wordpress/wp-content/themes/simpletheme/template/navigation/nav-footermenu.php",
@@ -756,19 +768,7 @@
 		"/Applications/MAMP/htdocs/simple/.gitignore.exclude",
 		"/Applications/MAMP/htdocs/simple/scss/simple.scss",
 		"/Applications/MAMP/htdocs/simple/scss/menu.scss",
-		"/Applications/MAMP/htdocs/simple/scss/layout.scss",
-		"/Applications/MAMP/htdocs/simple/html/header.php",
-		"/Applications/MAMP/htdocs/simple/html/info.php",
-		"/Applications/MAMP/htdocs/simple/bred.php",
-		"/Applications/MAMP/htdocs/simple/aside-right.php",
-		"/Applications/MAMP/htdocs/simple/aside-left.php",
-		"/Applications/MAMP/htdocs/simple/aside-left-right.php",
-		"/Applications/MAMP/htdocs/simple/content/width-bottom.php",
-		"/Applications/MAMP/htdocs/simple/scss/module.scss",
-		"/Applications/MAMP/htdocs/simple/content/footer-content.php",
-		"/Applications/MAMP/htdocs/simple/content/nav-main-content.php",
-		"/Applications/MAMP/htdocs/simple/scss/helper.scss",
-		"/Applications/MAMP/htdocs/simple/content/module.scss"
+		"/Applications/MAMP/htdocs/simple/scss/layout.scss"
 	],
 	"find":
 	{
@@ -787,6 +787,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"background-info",
+			"ackground-info",
+			"text_domain",
 			"simleTheme_cat_tag();",
 			"box-img",
 			"<PROD_PICTURE_ALT_TEXT></PROD_PICTURE_ALT_TEXT>",
@@ -840,19 +843,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "assets/js/simple.js",
-					"semi_transient": true,
+					"file": "scss/animate-element.scss",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3013,
+						"buffer_size": 214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								214,
+								214
 							]
 						],
 						"settings":
@@ -862,12 +865,27 @@
 							{
 								"close":
 								{
+									"1":
+									[
+										213,
+										214
+									]
 								},
 								"icon":
 								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
 								},
 								"open":
 								{
+									"1":
+									[
+										156,
+										157
+									]
 								},
 								"unmatched":
 								{
@@ -875,16 +893,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -895,48 +908,53 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content"
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"color_scheme": "Packages/User/Color Highlighter/themes/brogrammer.tmTheme",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1039.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
