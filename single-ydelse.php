@@ -78,7 +78,11 @@ $term_ids = wp_list_pluck( $terms,'term_id' );
       while ( $second_query->have_posts() ) : $second_query->the_post();
         echo '<div class=" flex-item ydelse ydelse-related">';
           echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
-            the_title( '<h4 class="post-loop-title">', '</h4>');
+            if ( get_field('box_overskrift') ) {
+              echo '<h4 class="post-loop-title">' . get_field('box_overskrift') . '</h4>';
+            } else {
+              the_title( '<h4 class="post-loop-title">', '</h4>');
+            }
             if ( has_post_thumbnail() ) {
               echo '<div class="box-img">';
               the_post_thumbnail( 'small' );

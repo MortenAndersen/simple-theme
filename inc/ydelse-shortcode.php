@@ -28,7 +28,11 @@ function simpleTheme_ydelser($atts) {
         the_post_thumbnail( 'simpletheme-content-image' );
         echo '</div>';
       }
-    the_title('<h4>', '</h4>');
+    if ( get_field('box_overskrift') ) {
+      echo '<h4 class="post-loop-title">' . get_field('box_overskrift') . '</h4>';
+    } else {
+      the_title( '<h4 class="post-loop-title">', '</h4>');
+    }
     the_excerpt();
     echo '</a>';
  	 echo '</div>';

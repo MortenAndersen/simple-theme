@@ -137,7 +137,11 @@ function ydelser_type() {
                         echo '<div class="flex-item">';
                             echo '<article id="post-' . get_the_ID() . '" class="' . $post_class = implode( ' ', get_post_class() ) . '"">';
                                 echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
-                                    the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    if ( get_field('box_overskrift') ) {
+                                        echo '<h4 class="post-loop-title">' . get_field('box_overskrift') . '</h4>';
+                                    } else {
+                                        the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    }
                                     if ( has_post_thumbnail() ) {
                                         echo '<div class="box-img">';
                                         the_post_thumbnail( 'small');
@@ -175,7 +179,11 @@ function ydelser_all() {
                 echo '<div class="flex-item">';
                             echo '<article id="post-' . get_the_ID() . '" class="' . $post_class = implode( ' ', get_post_class() ) . '"">';
                                 echo '<a href="' . get_the_permalink() . '" class="image-zoom">';
-                                    the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    if ( get_field('box_overskrift') ) {
+                                        echo '<h4 class="post-loop-title">' . get_field('box_overskrift') . '</h4>';
+                                    } else {
+                                        the_title( '<h4 class="post-loop-title">', '</h4>');
+                                    }
                                     if ( has_post_thumbnail() ) {
                                         echo '<div class="box-img">';
                                         the_post_thumbnail( 'small');
@@ -191,7 +199,6 @@ function ydelser_all() {
         wp_reset_query();
 
  }
-
 
 }
 }
