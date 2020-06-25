@@ -19,3 +19,20 @@
         height: 33vh;
     }
 }
+
+.banner-text-con {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+
+}
+.banner-text {
+    color: #fff;
+    line-height: 1.1;
+    font-size: 2.5em;
+    p {
+        margin: 0;
+    }
+}
