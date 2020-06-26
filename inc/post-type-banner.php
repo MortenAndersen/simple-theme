@@ -14,7 +14,7 @@ add_action( 'init', 'simpleTheme_create_posttype_banner' );
 	    		),
 	    		'public' => true,
 	    		'publicly_queryable' => false,
-	    		'menu_icon' => 'dashicons-hammer',
+	    		'menu_icon' => 'dashicons-format-gallery',
 	    		'supports' => array(
 	    			'title',
 	    			'editor',
