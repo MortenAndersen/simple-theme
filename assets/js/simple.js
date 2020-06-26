@@ -102,6 +102,17 @@
             controls: false
         });
 
+        // simpleTheme_banner Slider
+        $('.simpleTheme_banner').bxSlider({
+            mode: 'fade',
+            speed: 1500,
+            auto: true,
+            pager: false,
+            controls: false,
+            touchEnabled: false,
+            //autoHover: true
+        });
+
         // Video
         $(".video").fitVids();
 

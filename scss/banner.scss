@@ -26,13 +26,67 @@
     bottom: 0;
     left: 0;
     top: 0;
+    > a {
+        text-decoration: none;
+        background: #cb7515;
+        color: #fff;
+        padding: .5em 1em;
+        float: right;
+        margin-top: .5em;
+        transition: 1s all;
+        &:hover {background: orange;
+        }
+    }
+}
+
+.banner-text {
+ text-align: center;
+  background: rgba(0,0,0,.5);
+  padding: 2vw 0;
+  > * {
+    margin: 0;
+  }
+}
+
+.banner-content {
+  position: relative;
+ color: #fff;
+ }
+
+
+@media (min-width: 700px){
+.banner-content {
+
+  font-size: clamp(1rem, 3vw, 3rem);
+  line-height: 1.1;
+  display: grid;
+ align-items: center;
+  height: 100%;
+
 
 }
 .banner-text {
-    color: #fff;
-    line-height: 1.1;
-    font-size: 2.5em;
-    p {
-        margin: 0;
+ text-align: center;
+  background: rgba(0,0,0,.2);
+  padding: 2vw 0;
+}
+.banner-text-con {
+    > a {
+        position: absolute;
+        right: 1em;
+        bottom: 2em;
+        z-index: 100;
+
+        padding: .5em 2em;
     }
+}
+}
+@media (min-width: 769px){
+    .banner-text-con {
+    > a {
+
+        right: 2em;
+
+    }
+}
 }

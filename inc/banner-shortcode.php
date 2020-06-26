@@ -18,78 +18,40 @@ function simpleTheme_banner($atts) {
 
 
  if ( $loop->have_posts() ) {
- 	echo '<div class="banner">';
-  echo '<div class="gallery">';
+ 	echo '<div class="simpleTheme_banner">';
+
  while ( $loop->have_posts() ) : $loop->the_post();
  	echo '<div id="post-id-' .get_the_ID(). '">';
 
         the_post_thumbnail();
         echo '<div class="l-wrap l-banner banner-text-con">';
+        echo '<div class="banner-content">';
         echo '<div class="banner-text">';
           the_content();
         echo '</div>';
         echo '</div>';
 
+        $link = get_field('link');
+if( $link ):
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+
+    echo '<a href="' . esc_url( $link_url ) . '" target="' .esc_attr( $link_target ) . '">' . esc_html( $link_title ) . '</a>';
+endif;
+
+echo '</div>';
 
  	 echo '</div>';
  endwhile; wp_reset_query();
- echo '</div>';
+
  echo '</div>';
  }
 
 
 
 
-// css style
-echo '<style type="text/css" scoped>';
-if ( $loop->have_posts() ) {
 
-  $i = 1;
-
-
- while ( $loop->have_posts() ) : $loop->the_post();
-  echo '.css_banner.slide' . $i;
-    echo " {\n";
-    echo ' background: url(';
-          echo get_the_post_thumbnail_url();
-    echo ");\n";
-    echo 'animation:fade' . $i . ' 15s infinite;';
-    echo "\n";
-    echo '-webkit-animation:fade' . $i . ' 15s infinite;';
-    echo "}\n";
-
-
-
- $i++;
- endwhile; wp_reset_query();
-
-}
-
-
-$i = 1;
-// css keyframe
-
-while ( $loop->have_posts() ) : $loop->the_post();
-  echo '@keyframes fade' . $i;
-    echo " {\n";
-
-
-
-
-        // do something
-       echo ' 0%   {opacity:1}';
-
-
-
-    echo "}\n";
-
-
-
- $i++;
- endwhile; wp_reset_query();
-
-
- echo '</style>';
 
 
     $myvariable = ob_get_clean();

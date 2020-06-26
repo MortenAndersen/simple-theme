@@ -87,7 +87,7 @@ require get_parent_theme_file_path( '/inc/widget.php' );
 // Theme Post type
 require get_parent_theme_file_path( '/inc/post-type.php' );
 require get_parent_theme_file_path( '/inc/post-type-ydelse.php' );
-// require get_parent_theme_file_path( '/inc/post-type-banner.php' );
+require get_parent_theme_file_path( '/inc/post-type-banner.php' );
 
 // Shortcode
 require get_parent_theme_file_path( '/inc/person-shortcode.php' );
@@ -95,7 +95,7 @@ require get_parent_theme_file_path( '/inc/ydelse-shortcode.php' );
 require get_parent_theme_file_path( '/inc/samarbejde-shortcode.php' );
 require get_parent_theme_file_path( '/inc/contactinfo-shortcode.php' );
 require get_parent_theme_file_path( '/inc/post-shortcode.php' );
-// require get_parent_theme_file_path( '/inc/banner-shortcode.php' );
+require get_parent_theme_file_path( '/inc/banner-shortcode.php' );
 
 // Box
 require get_parent_theme_file_path( '/inc/box.php' );
