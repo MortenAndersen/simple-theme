@@ -44,6 +44,9 @@ h3 {
     font-size: 1.3em;
     border-left: .25em solid;
     padding-left: 1em;
+    aside & {
+        margin-top: 0;
+    }
 }
 
 p+h2 {margin-bottom:-.5em}
