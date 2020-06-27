@@ -105,12 +105,13 @@
         // simpleTheme_banner Slider
         $('.simpleTheme_banner').bxSlider({
             mode: 'fade',
-            speed: 1500,
+            speed: 2500,
+            pause: 6000,
             auto: true,
             pager: false,
             controls: false,
             touchEnabled: false,
-            //autoHover: true
+            autoHover: true
         });
 
         // Video
