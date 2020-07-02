@@ -2,20 +2,20 @@
 
 // If ACF
 if( function_exists('acf_add_local_field_group') ):
-// Posttype Ydelser
+// Posttype referencer
 
-add_action( 'init', 'simpleTheme_create_posttype_ydelser' );
+add_action( 'init', 'simpleTheme_create_posttype_referencer' );
 
-	function simpleTheme_create_posttype_ydelser() {
+	function simpleTheme_create_posttype_referencer() {
 		 register_post_type(
-	    	'ydelse',
+	    	'reference',
 	    	array(
 	    		'labels' => array(
-	    			'name' => __('Ydelser', 'simpletheme'),
-	    			'singular_name' => __('Ydelse', 'simpletheme')
+	    			'name' => __('Referencer', 'simpletheme'),
+	    			'singular_name' => __('Reference', 'simpletheme')
 	    		),
 	    		'public' => true,
-	    		'menu_icon' => 'dashicons-hammer',
+	    		'menu_icon' => 'dashicons-nametag',
 	    		'supports' => array(
 	    			'title',
 	    			'editor',
@@ -25,19 +25,19 @@ add_action( 'init', 'simpleTheme_create_posttype_ydelser' );
 	    		),
 	    		'show_in_rest' => true,
 	    		'rewrite' => array(
-	    			'slug' => 'ydelse'
+	    			'slug' => 'reference'
 	    		),
 	    	)
 	    );
 	}
 
-	function simpleTheme_posttype_function_ydelser() {
-	    simpleTheme_create_posttype_ydelser();
+	function simpleTheme_posttype_function_referencer() {
+	    simpleTheme_create_posttype_referencer();
 	}
 
-	// Custom Taxonomy = 'ydelse-type'
+	// Custom Taxonomy = 'reference-type'
 
-	function custom_taxonomy_ydelse() {
+	function custom_taxonomy_reference() {
 
     $labels = array(
         'name'                       => _x( 'Typer', 'Taxonomy General Name', 'simpletheme' ),
@@ -72,30 +72,30 @@ add_action( 'init', 'simpleTheme_create_posttype_ydelser' );
         'show_in_rest'							=> true,
 
     );
-    register_taxonomy( 'ydelse-type', array( 'ydelse' ), $args );
+    register_taxonomy( 'reference-type', array( 'reference' ), $args );
 }
 
-add_action( 'init', 'custom_taxonomy_ydelse', 2 );
+add_action( 'init', 'custom_taxonomy_reference', 2 );
 
 
 
 
 
-// Ændre archive loop på 'ydelse-type' til orderby menu_order
+// Ændre archive loop på 'reference-type' til orderby menu_order
 
 
 
-function order_ydelse_type_categories( $query ) {
+function order_reference_type_categories( $query ) {
     $query->set( 'orderby', 'menu_order' );
     $query->set( 'order', 'ASC' );
     return $query;
 }
 
-add_action( 'pre_get_posts', 'remove_pre_ydelse_orderby', 10 );
-function remove_pre_ydelse_orderby( $query ) {
-    if ( is_tax( 'ydelse-type' ) && $query->is_main_query() ) {
+add_action( 'pre_get_posts', 'remove_pre_reference_orderby', 10 );
+function remove_pre_reference_orderby( $query ) {
+    if ( is_tax( 'reference-type' ) && $query->is_main_query() ) {
         remove_all_filters( 'posts_orderby' );
-        add_action( 'pre_get_posts', 'order_ydelse_type_categories', 11 );
+        add_action( 'pre_get_posts', 'order_reference_type_categories', 11 );
     }
 }
 
@@ -103,10 +103,10 @@ function remove_pre_ydelse_orderby( $query ) {
 
 
 // Loop til page-ydleser.php - fordeling af de forskellige ydlerser
-if ( ! function_exists ( 'ydelser_type' ) ) {
-    function ydelser_type() {
+if ( ! function_exists ( 'referencer_type' ) ) {
+    function referencer_type() {
 
-        $post_type = 'ydelse';
+        $post_type = 'reference';
         $taxonomies = get_object_taxonomies( array( 'post_type' => $post_type ) );
 
         foreach( $taxonomies as $taxonomy ) :
@@ -130,7 +130,7 @@ if ( ! function_exists ( 'ydelser_type' ) ) {
               $posts = new WP_Query($args);
 
                 if( $posts->have_posts() ):
-                    echo '<div class="ydelse-beskrivelse">';
+                    echo '<div class="reference-beskrivelse">';
                         echo '<h3>' . $term->name . '</h3>';
                         echo '<p>' . $term->description . '</p>';
                     echo '</div>';
@@ -167,11 +167,11 @@ if ( ! function_exists ( 'ydelser_type' ) ) {
 
 // Loop hvis vi ikke benytter kategorier (type)
 
-if ( ! function_exists ( 'ydelser_all' ) ) {
-    function ydelser_all() {
+if ( ! function_exists ( 'referencer_all' ) ) {
+    function referencer_all() {
 
         $loop = new WP_Query( array(
-            'post_type' => 'ydelse',
+            'post_type' => 'reference',
             'posts_per_page' => -1,
             'orderby' => 'menu_order',
             'order' => 'asc',

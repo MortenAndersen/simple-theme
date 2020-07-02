@@ -87,6 +87,7 @@ require get_parent_theme_file_path( '/inc/widget.php' );
 // Theme Post type
 require get_parent_theme_file_path( '/inc/post-type.php' );
 require get_parent_theme_file_path( '/inc/post-type-ydelse.php' );
+require get_parent_theme_file_path( '/inc/post-type-reference.php' );
 require get_parent_theme_file_path( '/inc/post-type-banner.php' );
 
 // Shortcode
@@ -108,6 +109,7 @@ require get_parent_theme_file_path( '/assets/acf/acf-fields-gallery.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-personer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-kontakt.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-ydelser.php' );
+require get_parent_theme_file_path( '/assets/acf/acf-referencer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-filer.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-simple.php' );
 require get_parent_theme_file_path( '/assets/acf/acf-samarbejde.php' );
