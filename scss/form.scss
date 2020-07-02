@@ -58,7 +58,12 @@ input {
 
 // Go Back
 .go-back-con {
-    margin-top: 2em;
+    margin: 2em 0;
+}
+@media (min-width: 769px){
+    .go-back-con {
+    margin: 2em 0 0 0;
+}
 }
 .go-back {
     border: 1px solid #f2f2f2;
