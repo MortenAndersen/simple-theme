@@ -312,12 +312,12 @@ function simpleTheme_acf_person() {
                 if( get_field('mobiltelefon') ) {
                     echo '<li class="cell icon">';
                      get_template_part( 'assets/images/icon/cell' );
-                    echo '<span class="data">' . get_field('mobiltelefon') . '</span></li>';
+                    echo '<span class="data"><a href="tel:' . get_field('mobiltelefon') . '">' . get_field('mobiltelefon') . '</a></span></li>';
                 }
                 if( get_field('telefon') ) {
                     echo '<li class="phone icon">';
                     get_template_part( 'assets/images/icon/phone' );
-                    echo '<span class="data">' . get_field('telefon') . '</span></li>';
+                    echo '<span class="data"><a href="tel:' . get_field('telefon') . '">' . get_field('telefon') . '</a></span></li>';
                 }
                 if( get_field('email') ) {
                     echo '<li class="email icon">';
